@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p48457-e880357.adobeaemcloud.com/bin/franklin.delivery/Tekno-Point/motilaloswal-nbfc-website-poc-en/main"
+    url: "https://author-p48457-e1275402.adobeaemcloud.com/bin/franklin.delivery/Tekno-Point/motilaloswal-nbfc-website-poc-en/main"
     type: "markup"
     suffix: ".html"
