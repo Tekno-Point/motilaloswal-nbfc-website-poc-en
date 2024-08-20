@@ -152,10 +152,43 @@
     "id": "section",
     "fields": [
       {
-        "component": "text",
+        "component": "multiselect",
         "name": "style",
         "value": "",
-        "label": "Style",
+        "label": "Section Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Background Color",
+            "children": [
+              {
+                "name": "Light Grey",
+                "value": "light-grey"
+              },
+              {
+                "name": "Light Grey",
+                "value": "light-grey"
+              },
+              {
+                "name": "Dark Grey",
+                "value": "dark-grey"
+              },
+              {
+                "name": "Light Black",
+                "value": "light-black"
+              },
+              {
+                "name": "Dark Black",
+                "value": "dark-black"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "background-image",
+        "label": "Background Image",
         "valueType": "string"
       }
     ]
