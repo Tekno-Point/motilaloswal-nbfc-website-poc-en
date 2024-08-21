@@ -1,0 +1,50 @@
+.footer {
+    padding: 40px 0;
+    background-color: var(--dark-charcoa);
+
+    >div>div>div {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+
+        >p {
+            white-space: nowrap;
+            display: inline;
+            color: var(--white);
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            text-align: center;
+            background-color: var(--dark-charcoa);
+        }
+
+        >ol {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 18s linear infinite;
+
+            >li {
+                list-style: auto;
+                display: inline-block;
+                padding-right: 50px;
+                color: var(--white);
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
