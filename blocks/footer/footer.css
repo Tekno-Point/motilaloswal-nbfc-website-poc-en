@@ -2,6 +2,7 @@
   padding: 40px 0;
   background-color: var(--dark-charcoa);
 }
+
 .footer > div > div > div {
   display: flex;
   gap: 20px;
@@ -9,6 +10,7 @@
   white-space: nowrap;
   position: relative;
 }
+
 .footer > div > div > div > p {
   white-space: nowrap;
   display: inline;
@@ -21,11 +23,13 @@
   text-align: center;
   background-color: var(--dark-charcoa);
 }
+
 .footer > div > div > div > ol {
   display: inline-block;
   white-space: nowrap;
   animation: scroll 18s linear infinite;
 }
+
 .footer > div > div > div > ol > li {
   list-style: auto;
   display: inline-block;
@@ -38,7 +42,8 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
-}/*# sourceMappingURL=footer.css.map */
+}

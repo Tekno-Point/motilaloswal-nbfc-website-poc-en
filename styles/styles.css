@@ -17,18 +17,19 @@ body {
   line-height: 1;
   overflow: hidden auto;
   box-sizing: border-box;
-  font-family: poppins-regular;
+  font-family: poppins-regular,sans-serif;
 }
 
 :root {
   /* colors */
   --white: white;
   --black: black;
-  --dark-charcoa:#333333;
+  --dark-charcoa:#333;
   --silver:#BCBCBC;
   --light-grullo:#8A93A0;
 
   /* fonts */
+
 /*   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace; */
@@ -113,7 +114,7 @@ h6 {
   margin: auto;
 }
 
-@media screen and (max-width: 767.99px) {
+@media screen and (width <= 767.99px) {
   .section>div {
     width: 90%;
   }
