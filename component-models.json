@@ -114,6 +114,32 @@
     "id": "columns",
     "fields": [
       {
+        "component": "multiselect",
+        "label": "Columns Style",
+        "name": "style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Columns Style",
+            "children": [
+              {
+                "name": "Investment Opportunities",
+                "value": "investment-opportunities"
+              }
+            ]
+          },
+          {
+            "name": "Event Style",
+            "children": [
+              {
+                "name": "Redirect Column",
+                "value": "redirect-column"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "text",
         "valueType": "number",
         "name": "columns",
