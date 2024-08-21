@@ -1,14 +1,44 @@
-footer {
-  padding: 2rem;
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+.footer {
+  padding: 40px 0;
+  background-color: var(--dark-charcoa);
+}
+.footer > div > div > div {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.footer > div > div > div > p {
+  white-space: nowrap;
+  display: inline;
+  color: var(--white);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: var(--dark-charcoa);
+}
+.footer > div > div > div > ol {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 18s linear infinite;
+}
+.footer > div > div > div > ol > li {
+  list-style: auto;
+  display: inline-block;
+  padding-right: 50px;
+  color: var(--white);
+  font-size: 14px;
 }
 
-footer .footer {
-  max-width: 1200px;
-  margin: auto;
-}
-
-footer .footer p {
-  margin: 0;
-}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}/*# sourceMappingURL=footer.css.map */
