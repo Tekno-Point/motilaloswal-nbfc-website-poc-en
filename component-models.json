@@ -116,7 +116,7 @@
       {
         "component": "multiselect",
         "label": "Columns Style",
-        "name": "style",
+        "name": "classes",
         "valueType": "string",
         "options": [
           {
