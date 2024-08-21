@@ -1,3 +1,6 @@
+@import url("./redirect-column.css");
+@import url("./investment-opportunities.css");
+
 .columns > div {
   display: flex;
   flex-direction: column;
