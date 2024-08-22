@@ -259,6 +259,22 @@
     "id": "embed",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Embed Classes",
+        "options": [
+          {
+            "name": "Embed Style",
+            "children": [
+              {
+                "name": "Video Style",
+                "value": "video-half-style"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "embed",
         "label": "Embed"
