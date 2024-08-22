@@ -254,5 +254,15 @@
         "label": "Reference"
       }
     ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "name": "embed",
+        "label": "Embed"
+      }
+    ]
   }
 ]
