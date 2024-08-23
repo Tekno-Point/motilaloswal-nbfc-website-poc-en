@@ -48,20 +48,6 @@
     "id": "image",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "fileReference",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "alt",
-        "value": "Default alt",
-        "label": "Alt Text"
-      },
-      {
         "component": "multiselect",
         "valueType": "string",
         "name": "classes",
@@ -77,6 +63,20 @@
             ]
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "alt",
+        "value": "Default alt",
+        "label": "Alt Text"
       }
     ]
   },
