@@ -6,12 +6,15 @@
   line-height: 1.3;
   letter-spacing: -2.7px;
 }
+
 .section .default-content-wrapper ul {
   list-style: none;
 }
+
 .section .default-content-wrapper li {
   list-style: none;
 }
+
 .section .default-content-wrapper ul li h3 strong {
   font-weight: 600;
   font-size: 14px;
@@ -19,6 +22,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .section .default-content-wrapper ul li h3 em {
   font-weight: 400;
   font-size: 13px;
@@ -26,6 +30,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .section .default-content-wrapper ul:nth-last-child() {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

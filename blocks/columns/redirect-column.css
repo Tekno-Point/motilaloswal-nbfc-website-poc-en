@@ -1,6 +1,7 @@
 .columns.redirect-column {
   position: relative;
 }
+
 .columns.redirect-column a {
   position: absolute;
   width: 100%;
