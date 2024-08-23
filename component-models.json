@@ -168,6 +168,28 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "label": "Cards Style",
+        "name": "classes",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Cards Style",
+            "children": [
+              {
+                "name": "Market Leaders",
+                "value": "market-leaders"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -176,15 +198,6 @@
         "name": "classes",
         "valueType": "string",
         "options": [
-          {
-            "name": "Card Style",
-            "children": [
-              {
-                "name": "Market Leaders",
-                "value": "market-leaders"
-              }
-            ]
-          },
           {
             "name": "Event Style",
             "children": [
