@@ -48,23 +48,6 @@
     "id": "image",
     "fields": [
       {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Image Style",
-        "options": [
-          {
-            "name": "Image Style",
-            "children": [
-              {
-                "name": "Iamge Center",
-                "value": "image-center"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",
@@ -275,6 +258,15 @@
               {
                 "name": "Think Stocks",
                 "value": "think-stocks"
+              }
+            ]
+          },
+          {
+            "name": "Image Style",
+            "children": [
+              {
+                "name": "Image Center",
+                "value": "image-center"
               }
             ]
           }
