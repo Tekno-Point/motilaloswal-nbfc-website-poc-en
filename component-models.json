@@ -168,16 +168,16 @@
     ]
   },
   {
-    "id": "card",
+    "id": "cards",
     "fields": [
       {
         "component": "multiselect",
-        "label": "Card Style",
+        "label": "Cards Style",
         "name": "classes",
         "valueType": "string",
         "options": [
           {
-            "name": "Card Style",
+            "name": "Cards Style",
             "children": [
               {
                 "name": "Market Leaders",
@@ -195,7 +195,12 @@
             ]
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [ 
       {
         "component": "reference",
         "valueType": "string",
@@ -253,6 +258,15 @@
               {
                 "name": "Think Stocks",
                 "value": "think-stocks"
+              }
+            ]
+          },
+          {
+            "name": "Image Style",
+            "children": [
+              {
+                "name": "Image Center",
+                "value": "image-center"
               }
             ]
           }
