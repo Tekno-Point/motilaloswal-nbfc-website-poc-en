@@ -60,6 +60,23 @@
         "name": "alt",
         "value": "Default alt",
         "label": "Alt Text"
+      },
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Image Style",
+        "options": [
+          {
+            "name": "Image Style",
+            "children": [
+              {
+                "name": "Iamge Center",
+                "value": "image-center"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -184,20 +201,7 @@
                 "value": "market-leaders"
               }
             ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "multiselect",
-        "label": "Card Style",
-        "name": "classes",
-        "valueType": "string",
-        "options": [
+          },
           {
             "name": "Event Style",
             "children": [
@@ -208,7 +212,12 @@
             ]
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [ 
       {
         "component": "reference",
         "valueType": "string",
