@@ -125,6 +125,18 @@
               {
                 "name": "Investment Opportunities",
                 "value": "investment-opportunities"
+              },
+              {
+                "name": "Making Investing Affordable",
+                "value": "making-investing-affordable"
+              },
+              {
+                "name": "Multiple Ways to Grow",
+                "value": "multiple-ways-to-grow"
+              },
+              {
+                "name": "Remarkable Achievements",
+                "value": "remarkable-achievements"
               }
             ]
           },
@@ -158,6 +170,32 @@
   {
     "id": "card",
     "fields": [
+      {
+        "component": "multiselect",
+        "label": "Card Style",
+        "name": "classes",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Card Style",
+            "children": [
+              {
+                "name": "Market Leaders",
+                "value": "market-leaders"
+              }
+            ]
+          },
+          {
+            "name": "Event Style",
+            "children": [
+              {
+                "name": "Redirect Card",
+                "value": "redirect-card"
+              }
+            ]
+          }
+        ]
+      },
       {
         "component": "reference",
         "valueType": "string",
@@ -206,6 +244,15 @@
               {
                 "name": "Dark Black",
                 "value": "dark-black"
+              }
+            ]
+          },
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Think Stocks",
+                "value": "think-stocks"
               }
             ]
           }
@@ -267,8 +314,8 @@
             "name": "Embed Style",
             "children": [
               {
-                "name": "Video Style",
-                "value": "video-half-style"
+                "name": "Making Money Work",
+                "value": "making-money-work"
               }
             ]
           }
