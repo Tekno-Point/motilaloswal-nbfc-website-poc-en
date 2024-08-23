@@ -12,6 +12,7 @@
 
 
 @import url('./reset.css');
+@import url('./achievements/achievements.css');
 
 body {
   line-height: 1;
