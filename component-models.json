@@ -200,7 +200,7 @@
   },
   {
     "id": "card",
-    "fields": [ 
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
@@ -267,6 +267,15 @@
               {
                 "name": "Image Center",
                 "value": "image-center"
+              }
+            ]
+          },
+          {
+            "name": "Header Style",
+            "children": [
+              {
+                "name": "Header Style",
+                "value": "header-style"
               }
             ]
           }
