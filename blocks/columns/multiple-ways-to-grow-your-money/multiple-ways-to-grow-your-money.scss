@@ -1,0 +1,89 @@
+.section.multiple-ways-to-grow {
+    .columns-wrapper {
+        .multiple-ways-to-grow {
+            div {
+                gap: 20px;
+                justify-content: center;
+
+                div {
+                    position: relative;
+                    z-index: 1;
+                    border-radius: 4px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    background: linear-gradient(119deg, #fff 0%, #e8e8e8 100%);
+                    box-shadow: 0px 16px 48px 0px rgba(112, 144, 176, 0.3),
+                        4px 4px 12px 0px rgba(30, 51, 72, 0.15);
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    max-width: 267px;
+                    width: 100%;
+
+                    &::before {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-top: 100px solid #0000001f;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: -1;
+                        border-radius: 0 0 5px;
+                    }
+
+                    &:hover {
+                        &::before {
+                            transition: 1s ease;
+                            width: 100%;
+                            height: 100%;
+                            border-top: 0;
+                            border-left: 0;
+                            background-color: #0000001f;
+                            border-radius: 4px 0 4px 4px;
+                        }
+                    }
+
+                    p:first-child {
+                        width: 38px;
+                        height: 38px;
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 24px;
+                    }
+
+                    p:last-child {
+                        color: #8a93a0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767.99px) {
+    .section.multiple-ways-to-grow {
+        .columns-wrapper {
+            .multiple-ways-to-grow {
+                div {
+                    div {
+                        max-width: unset;
+                        width: unset;
+
+                        p:first-child {
+                            width: 38px;
+                            height: 38px;
+                        }
+
+                        p:nth-child(2) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
