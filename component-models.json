@@ -235,10 +235,6 @@
                 "value": "light-grey"
               },
               {
-                "name": "Light Grey",
-                "value": "light-grey"
-              },
-              {
                 "name": "Dark Grey",
                 "value": "dark-grey"
               },
@@ -253,11 +249,40 @@
             ]
           },
           {
+            "name": "Background Image",
+            "children": [
+              {
+                "name": "Hero Banner Fade",
+                "value": "hero-banner-fade"
+              }
+            ]
+          },
+          {
             "name": "Content Style",
             "children": [
               {
                 "name": "Think Stocks",
                 "value": "think-stocks"
+              },
+              {
+                "name": "Making Investing Affordable",
+                "value": "making-investing-affordable"
+              },
+              {
+                "name": "Investment Opportunities",
+                "value": "investment-opportunities"
+              },
+              {
+                "name": "Market Leaders Reason",
+                "value": "market-leaders-reason"
+              },
+              {
+                "name": "Multiple Ways To Grow",
+                "value": "multiple-ways-to-grow"
+              },
+              {
+                "name": "Remarkable Achievements",
+                "value": "remarkable-achievements"
               }
             ]
           },
