@@ -28,7 +28,7 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 32px;
-  --heading-font-size-xl: 28px;
+  --heading-font-size-xl: 44px;
   --heading-font-size-l: 26px;
   --heading-font-size-m: 22px;
   --heading-font-size-s: 20px;
@@ -130,7 +130,7 @@ h6 {
 @media screen and (width <=767.99px) {
   :root {
     --heading-font-size-xxl: 32px;
-    --heading-font-size-xl: 28px;
+    --heading-font-size-xl: 32px;
     --heading-font-size-l: 26px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;

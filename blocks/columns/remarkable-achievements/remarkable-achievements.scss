@@ -23,7 +23,9 @@ main>div:nth-of-type(7) {
     >div:nth-of-type(2) {
         position: absolute;
         top: 10%;
-        right: 0;
+        right: 7%;
+        margin: unset;
+        max-width: unset;
 
 
         >div {
@@ -83,7 +85,7 @@ main>div:nth-of-type(7) {
                 strong {
                     font-size: 18px;
                     line-height: 27px;
-                    color: #fff;
+                    color: var(--white);
                     font-family: poppins-semibold;
                 }
             }
@@ -92,7 +94,7 @@ main>div:nth-of-type(7) {
                 margin-top: 10px;
                 font-size: 12px;
                 line-height: 18px;
-                color: #8A93A0;
+                color: var(--light-grullo);
                 font-family: poppins-semibold;
                 // min-height: 78px;
             }
@@ -119,6 +121,7 @@ main>div:nth-of-type(7) {
 
     main>div:nth-of-type(7) {
         flex-direction: column;
+        align-items: center;
 
         >div:nth-of-type(1) {
             height: 1180px;
@@ -127,7 +130,7 @@ main>div:nth-of-type(7) {
             justify-content: unset;
             padding: 30px 15px;
             border-radius: 8px;
-            width: unset;
+            width: 90%;
 
             h2 {
                 text-align: center;
@@ -144,7 +147,7 @@ main>div:nth-of-type(7) {
         >div:nth-of-type(2) {
             position: absolute;
             top: 22%;
-            right: 0;
+            right: unset;
 
             >div {
                 >div:nth-of-type(1) {
@@ -179,9 +182,4 @@ main>div:nth-of-type(7) {
         }
     }
 
-}
-
-
-main>div:nth-of-type(8) {
-    margin-top: 100px;
 }
