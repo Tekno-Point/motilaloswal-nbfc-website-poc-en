@@ -1,0 +1,11 @@
+header.header-wrapper .header .nav-wrapper .nav-hamburger button {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  header.header-wrapper .header .nav-wrapper .nav-hamburger button {
+    display: block;
+  }
+}
+header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper p {
+  font-size: 1em;
+}/*# sourceMappingURL=header-common.css.map */
