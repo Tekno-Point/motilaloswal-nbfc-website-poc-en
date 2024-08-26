@@ -200,7 +200,7 @@
   },
   {
     "id": "card",
-    "fields": [ 
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
@@ -235,10 +235,6 @@
                 "value": "light-grey"
               },
               {
-                "name": "Light Grey",
-                "value": "light-grey"
-              },
-              {
                 "name": "Dark Grey",
                 "value": "dark-grey"
               },
@@ -249,6 +245,15 @@
               {
                 "name": "Dark Black",
                 "value": "dark-black"
+              }
+            ]
+          },
+          {
+            "name": "Background Image",
+            "children": [
+              {
+                "name": "Hero Banner Fade",
+                "value": "hero-banner-fade"
               }
             ]
           },
