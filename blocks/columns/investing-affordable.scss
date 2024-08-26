@@ -1,0 +1,55 @@
+.columns.making-investing-affordable {
+    margin-top: 40px;
+}
+
+.columns.making-investing-affordable {
+    div {
+        div {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        div::after {
+            content: "";
+            position: absolute;
+            height: 120px;
+            width: 1px;
+            background: #D8DFE85C;
+            right: -15px;
+            top: 0;
+            opacity: 0.6;
+        }
+
+        div:last-child::after{
+            content: none;
+        } 
+    }
+}
+
+.columns.making-investing-affordable {
+    p {
+        text-align: center;
+        color: var(--white);
+        font-family: poppins-regular, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.columns.making-investing-affordable {
+    p {
+        strong {
+            font-size: 56px;
+            line-height: 84px;
+            font-family: poppins-semibold, sans-serif;
+            font-weight: 600;
+        }
+    }
+}
+
+// .columns.making-investing-affordable {
+//     .button-container{
+//         margin-top: 40px;
+//     }
+// }
