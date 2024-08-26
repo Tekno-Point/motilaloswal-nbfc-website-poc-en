@@ -6,6 +6,11 @@
 @media only screen and (max-width: 768px) {
   .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div {
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div::-webkit-scrollbar {
+    display: none;
   }
 }
 .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul {

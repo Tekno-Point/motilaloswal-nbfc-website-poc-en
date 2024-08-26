@@ -6,9 +6,13 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-
                     @media only screen and (max-width: 768px) {
                         overflow-y: scroll;
+                        scrollbar-width: none;
+                        -ms-overflow-style: none;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
                     }
 
                     ul {
