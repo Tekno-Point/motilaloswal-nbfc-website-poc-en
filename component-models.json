@@ -269,15 +269,6 @@
                 "value": "image-center"
               }
             ]
-          },
-          {
-            "name": "Header Style",
-            "children": [
-              {
-                "name": "Header Style",
-                "value": "header-style"
-              }
-            ]
           }
         ]
       },
