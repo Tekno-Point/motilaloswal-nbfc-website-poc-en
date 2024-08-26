@@ -29,7 +29,7 @@
 .columns.making-investing-affordable {
     p {
         text-align: center;
-        color: #fff;
+        color: var(--white);
         font-family: poppins-regular, sans-serif;
         font-weight: 400;
         font-size: 14px;
@@ -48,8 +48,8 @@
     }
 }
 
-.columns.making-investing-affordable {
-    .button-container{
-        margin-top: 40px;
-    }
-}
+// .columns.making-investing-affordable {
+//     .button-container{
+//         margin-top: 40px;
+//     }
+// }
