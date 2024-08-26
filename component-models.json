@@ -366,5 +366,14 @@
         "label": "Embed"
       }
     ]
+  },{
+    "id": "investment-opportunity",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text"
+      }
+    ]
   }
 ]
