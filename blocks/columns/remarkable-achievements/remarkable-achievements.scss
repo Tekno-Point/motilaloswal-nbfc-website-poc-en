@@ -41,78 +41,78 @@ main>div:nth-of-type(7) {
         }
 
 
-
     }
-}
 
-.columns.remarkable-achievements {
-    display: flex;
-
-    >div {
+    .columns.remarkable-achievements {
         display: flex;
-        display: unset;
-        flex-direction: column;
-        flex-direction: unset;
-        align-items: end;
-        align-items: unset;
-        gap: unset;
 
-        >div {
-            width: 56%;
-            padding: 24px 24px 32px 24px;
-            border-radius: 8px;
-            background: #454B54;
-            box-shadow: 0px 10px 30px 0px rgba(112, 144, 176, 0.15);
-            margin-bottom: 30px;
-            min-height: 200px;
-            flex: unset;
-            order: unset;
+        >div:nth-of-type(1),
+        >div:nth-of-type(2) {
+            display: flex;
+            display: unset;
+            flex-direction: column;
+            flex-direction: unset;
+            align-items: end;
+            align-items: unset;
+            gap: unset;
+
+            >div {
+                width: 56%;
+                padding: 24px 24px 32px 24px;
+                border-radius: 8px;
+                background: #454B54;
+                box-shadow: 0px 10px 30px 0px rgba(112, 144, 176, 0.15);
+                margin-bottom: 30px;
+                min-height: 200px;
+                flex: unset;
+                order: unset;
 
 
-            p:nth-of-type(1) {
-                text-align: end;
+                p:nth-of-type(1) {
+                    text-align: end;
 
-                .icon {
-                    img {
-                        text-align: end;
-                        width: 84px;
-                        height: 77px;
+                    .icon {
+                        img {
+                            text-align: end;
+                            width: 84px;
+                            height: 77px;
+                        }
                     }
                 }
-            }
 
-            p:nth-of-type(2) {
-                strong {
-                    font-size: 18px;
-                    line-height: 27px;
-                    color: var(--white);
-                    font-family: poppins-semibold;
+                p:nth-of-type(2) {
+                    strong {
+                        font-size: 18px;
+                        line-height: 27px;
+                        color: var(--white);
+                        font-family: poppins-semibold, 'sans-serif';
+                    }
+                }
+
+                p:nth-of-type(3) {
+                    margin-top: 10px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: var(--light-grullo);
+                    font-family: poppins-semibold, "sans-serif";
+                    // min-height: 78px;
                 }
             }
-
-            p:nth-of-type(3) {
-                margin-top: 10px;
-                font-size: 12px;
-                line-height: 18px;
-                color: var(--light-grullo);
-                font-family: poppins-semibold;
-                // min-height: 78px;
-            }
         }
-    }
-
-    >div:nth-of-type(1) {
-        >div:nth-of-type(2) {
-            background-color: #262626;
-        }
-    }
-
-    >div:nth-of-type(2) {
-        margin-top: 30px;
-        align-items: center;
 
         >div:nth-of-type(1) {
-            background-color: #262626;
+            >div:nth-of-type(2) {
+                background-color: var(--light-black);
+            }
+        }
+
+        >div:nth-of-type(2) {
+            margin-top: 30px;
+            align-items: center;
+
+            >div:nth-of-type(1) {
+                background-color: var(--light-black);
+            }
         }
     }
 }
@@ -155,31 +155,31 @@ main>div:nth-of-type(7) {
                 }
             }
         }
-    }
 
-    .columns.remarkable-achievements {
-        display: unset;
+        .columns.remarkable-achievements {
+            display: unset;
 
-        >div {
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            align-items: center;
-            gap: unset;
+            >div:nth-of-type(1),
+            >div:nth-of-type(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                align-items: center;
+                gap: unset;
 
-            >div {
-                width: 84%;
-                padding: 15px;
+                >div {
+                    width: 84%;
+                    padding: 15px;
 
-                >p {
-                    text-align: center;
+                    >p {
+                        text-align: center;
+                    }
                 }
             }
-        }
 
-        >div:nth-of-type(2) {
-            margin-top: unset;
+            >div:nth-of-type(2) {
+                margin-top: unset;
+            }
         }
     }
-
 }

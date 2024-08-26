@@ -33,11 +33,11 @@ main > div:nth-of-type(7) > div:nth-of-type(2) > div > div {
 main > div:nth-of-type(7) > div:nth-of-type(2) > div > div:nth-of-type(1) {
   align-items: end;
 }
-
-.columns.remarkable-achievements {
+main > div:nth-of-type(7) .columns.remarkable-achievements {
   display: flex;
 }
-.columns.remarkable-achievements > div {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1),
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) {
   display: flex;
   display: unset;
   flex-direction: column;
@@ -46,7 +46,8 @@ main > div:nth-of-type(7) > div:nth-of-type(2) > div > div:nth-of-type(1) {
   align-items: unset;
   gap: unset;
 }
-.columns.remarkable-achievements > div > div {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div,
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div {
   width: 56%;
   padding: 24px 24px 32px 24px;
   border-radius: 8px;
@@ -57,36 +58,40 @@ main > div:nth-of-type(7) > div:nth-of-type(2) > div > div:nth-of-type(1) {
   flex: unset;
   order: unset;
 }
-.columns.remarkable-achievements > div > div p:nth-of-type(1) {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(1),
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(1) {
   text-align: end;
 }
-.columns.remarkable-achievements > div > div p:nth-of-type(1) .icon img {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(1) .icon img,
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(1) .icon img {
   text-align: end;
   width: 84px;
   height: 77px;
 }
-.columns.remarkable-achievements > div > div p:nth-of-type(2) strong {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(2) strong,
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(2) strong {
   font-size: 18px;
   line-height: 27px;
   color: var(--white);
-  font-family: poppins-semibold;
+  font-family: poppins-semibold, "sans-serif";
 }
-.columns.remarkable-achievements > div > div p:nth-of-type(3) {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(3),
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(3) {
   margin-top: 10px;
   font-size: 12px;
   line-height: 18px;
   color: var(--light-grullo);
-  font-family: poppins-semibold;
+  font-family: poppins-semibold, "sans-serif";
 }
-.columns.remarkable-achievements > div:nth-of-type(1) > div:nth-of-type(2) {
-  background-color: #262626;
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div:nth-of-type(2) {
+  background-color: var(--light-black);
 }
-.columns.remarkable-achievements > div:nth-of-type(2) {
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) {
   margin-top: 30px;
   align-items: center;
 }
-.columns.remarkable-achievements > div:nth-of-type(2) > div:nth-of-type(1) {
-  background-color: #262626;
+main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div:nth-of-type(1) {
+  background-color: var(--light-black);
 }
 
 @media screen and (width <= 767.99px) {
@@ -120,24 +125,27 @@ main > div:nth-of-type(7) > div:nth-of-type(2) > div > div:nth-of-type(1) {
   main > div:nth-of-type(7) > div:nth-of-type(2) > div > div:nth-of-type(1) {
     align-items: center;
   }
-  .columns.remarkable-achievements {
+  main > div:nth-of-type(7) .columns.remarkable-achievements {
     display: unset;
   }
-  .columns.remarkable-achievements > div {
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1),
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     align-items: end;
     align-items: center;
     gap: unset;
   }
-  .columns.remarkable-achievements > div > div {
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div,
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div {
     width: 84%;
     padding: 15px;
   }
-  .columns.remarkable-achievements > div > div > p {
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(1) > div > p,
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) > div > p {
     text-align: center;
   }
-  .columns.remarkable-achievements > div:nth-of-type(2) {
+  main > div:nth-of-type(7) .columns.remarkable-achievements > div:nth-of-type(2) {
     margin-top: unset;
   }
 }/*# sourceMappingURL=remarkable-achievements.css.map */
