@@ -116,6 +116,10 @@ h6 {
   filter: inherit;
 }
 
+.button-container {
+  text-align: center;
+}
+
 .light-grey {
   background-color: var(--light-grey);
 }
