@@ -1,0 +1,49 @@
+.section.investment-opportunities .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (width <= 768px) {
+  .section.investment-opportunities .default-content-wrapper {
+    overflow-y: scroll;
+  }
+}
+
+.section.investment-opportunities .default-content-wrapper ul {
+  flex: 0 0 18%;
+  max-width: 18%;
+}
+
+.section.investment-opportunities .default-content-wrapper ul:nth-child(4) {
+  margin-top: 100px;
+}
+
+.section.investment-opportunities .default-content-wrapper ul li {
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 8px 24px 0 rgb(115 96 0 / 15%);
+  width: 100%;
+  padding: 15px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--light-grullo);
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.section.investment-opportunities .default-content-wrapper ul li span:first-child {
+  text-align: right;
+}
+
+.section.investment-opportunities .default-content-wrapper ul li .icon-redirect {
+  text-align: right;
+}
+
+.section.investment-opportunities .default-content-wrapper h2 {
+  display: none;
+}
