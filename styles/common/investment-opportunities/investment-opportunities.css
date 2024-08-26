@@ -1,28 +1,28 @@
-.section.investment-opportunities .default-content-wrapper {
+.section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media only screen and (max-width: 768px) {
-  .section.investment-opportunities .default-content-wrapper {
+  .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div {
     overflow-y: scroll;
   }
 }
-.section.investment-opportunities .default-content-wrapper ul {
+.section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul {
   flex: 0 0 18%;
   max-width: 18%;
 }
 @media only screen and (max-width: 768px) {
-  .section.investment-opportunities .default-content-wrapper ul {
+  .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul {
     flex: 0 0 42%;
     max-width: 42%;
     margin-right: 4%;
   }
 }
-.section.investment-opportunities .default-content-wrapper ul:nth-child(4) {
+.section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul:nth-child(3) {
   margin-top: 100px;
 }
-.section.investment-opportunities .default-content-wrapper ul li {
+.section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li {
   border-radius: 12px;
   background: #fff;
   box-shadow: 0px 8px 24px 0px rgba(115, 96, 0, 0.15);
@@ -39,16 +39,13 @@
   box-sizing: border-box;
 }
 @media only screen and (max-width: 768px) {
-  .section.investment-opportunities .default-content-wrapper ul li {
+  .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li {
     height: 200px;
   }
 }
-.section.investment-opportunities .default-content-wrapper ul li span:first-child {
+.section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li span:first-child {
   text-align: right;
 }
-.section.investment-opportunities .default-content-wrapper ul li .icon-redirect {
+.section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li .icon-redirect {
   text-align: right;
-}
-.section.investment-opportunities .default-content-wrapper h2 {
-  display: none;
 }/*# sourceMappingURL=investment-opportunities.css.map */
