@@ -370,9 +370,11 @@
     "id": "investment-opportunity",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "text",
-        "label": "Text"
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
