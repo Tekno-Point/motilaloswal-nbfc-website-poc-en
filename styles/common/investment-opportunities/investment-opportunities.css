@@ -3,34 +3,40 @@
   justify-content: space-between;
   align-items: center;
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (width <= 768px) {
   .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
   .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div::-webkit-scrollbar {
     display: none;
   }
 }
+
 .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul {
   flex: 0 0 18%;
   max-width: 18%;
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (width <= 768px) {
   .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul {
     flex: 0 0 42%;
     max-width: 42%;
     margin-right: 4%;
   }
 }
+
 .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul:nth-child(3) {
   margin-top: 100px;
 }
+
 .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li {
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0px 8px 24px 0px rgba(115, 96, 0, 0.15);
+  box-shadow: 0 8px 24px 0 rgb(115 96 0 / 15%);
   width: 100%;
   padding: 15px;
   height: 170px;
@@ -43,14 +49,17 @@
   font-weight: 500;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (width <= 768px) {
   .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li {
     height: 200px;
   }
 }
+
 .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li span:first-child {
   text-align: right;
 }
+
 .section.investment-opportunities .investment-opportunity-wrapper .investment-opportunity > div > div ul li .icon-redirect {
   text-align: right;
-}/*# sourceMappingURL=investment-opportunities.css.map */
+}
