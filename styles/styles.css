@@ -130,6 +130,10 @@ h6 {
   background-color: var(--dark-black);
 }
 
+main>div:nth-of-type(n+3) {
+  padding: 100px 0 50px;
+}
+
 @media screen and (width <=767.99px) {
   :root {
     --heading-font-size-xxl: 32px;
@@ -142,6 +146,10 @@ h6 {
 
   .section>div {
     width: 90%;
+  }
+
+  main>div:nth-of-type(n+3) {
+    padding: 60px 0 40px;
   }
 }
 
