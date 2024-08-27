@@ -1,6 +1,9 @@
 {
   "mappings": [
     "/content/motilal-oswal/:/",
+    "/content/motilal-oswal/forms/generate-lead:/forms/generate-lead.json",
+    "/content/motilal-oswal/forms/lead:/forms/lead.json",
+    "/content/motilal-oswal/form/:/form/*.json",
     "/content/motilal-oswal/configuration:/.helix/config.json"
   ]
 }

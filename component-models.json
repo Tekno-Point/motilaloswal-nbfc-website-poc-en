@@ -366,5 +366,49 @@
         "label": "Embed"
       }
     ]
+  },
+  {
+    "id": "investment-opportunity",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "row": true
+      }
+    ]
+  },
+  {
+    "id": "highest-quality-research-stock-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "url",
+        "value": "",
+        "label": "Form URL",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "value": "",
+        "label": "API URL",
+        "valueType": "string"
+      }
+    ]
   }
 ]
