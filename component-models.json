@@ -410,5 +410,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "swiper",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
