@@ -397,14 +397,14 @@
     "fields": [
       {
         "component": "text",
-        "name": "url",
+        "name": "form-url",
         "value": "",
         "label": "Form URL",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "url",
+        "name": "api-url",
         "value": "",
         "label": "API URL",
         "valueType": "string"
