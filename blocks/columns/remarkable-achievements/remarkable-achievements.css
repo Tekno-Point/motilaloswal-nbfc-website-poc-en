@@ -1,0 +1,151 @@
+.section.remarkable-achievements {
+  display: flex;
+  position: relative;
+}
+.section.remarkable-achievements > div:nth-of-type(1) {
+  border-radius: 36px;
+  background: var(--white);
+  margin-top: 200px;
+  height: 380px;
+  width: 100%;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section.remarkable-achievements > div:nth-of-type(1) h2 {
+  text-align: start;
+  max-width: fit-content;
+  margin-bottom: 40px;
+}
+.section.remarkable-achievements > div:nth-of-type(1) .button-container {
+  text-align: unset;
+}
+.section.remarkable-achievements > div:nth-of-type(2) {
+  position: absolute;
+  top: 22%;
+  right: 11%;
+  margin: unset;
+  max-width: unset;
+}
+.section.remarkable-achievements > div:nth-of-type(2) > div > div {
+  display: flex;
+  flex-direction: column;
+}
+.section.remarkable-achievements > div:nth-of-type(2) > div > div:nth-of-type(1) {
+  align-items: end;
+}
+.section.remarkable-achievements .columns.remarkable-achievements {
+  display: flex;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1),
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: unset;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div,
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div {
+  width: 69%;
+  padding: 24px 24px 32px 24px;
+  border-radius: 8px;
+  background: #454B54;
+  box-shadow: 0px 10px 30px 0px rgba(112, 144, 176, 0.15);
+  margin-bottom: 30px;
+  min-height: 200px;
+  flex: unset;
+  order: unset;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(1),
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(1) {
+  text-align: end;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(1) .icon img,
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(1) .icon img {
+  text-align: end;
+  width: 84px;
+  height: 77px;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(2) strong,
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(2) strong {
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--white);
+  font-family: poppins-semibold, "sans-serif";
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div p:nth-of-type(3),
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div p:nth-of-type(3) {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--light-grullo);
+  font-family: poppins-semibold, "sans-serif";
+  min-height: 78px;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div:nth-of-type(2) {
+  background-color: var(--light-black);
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) {
+  margin-top: 30px;
+  align-items: center;
+}
+.section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div:nth-of-type(1) {
+  background-color: var(--light-black);
+}
+
+@media screen and (width <= 767.99px) {
+  .section.remarkable-achievements {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section.remarkable-achievements > div:nth-of-type(1) {
+    height: 1300px;
+    display: unset;
+    flex-direction: unset;
+    justify-content: unset;
+    padding: 30px 15px;
+    border-radius: 8px;
+    width: 90%;
+  }
+  .section.remarkable-achievements > div:nth-of-type(1) h2 {
+    text-align: center;
+    max-width: unset;
+  }
+  .section.remarkable-achievements > div:nth-of-type(1) .button-container {
+    position: absolute;
+    bottom: 23px;
+    left: 50px;
+  }
+  .section.remarkable-achievements > div:nth-of-type(2) {
+    position: absolute;
+    top: 22%;
+    right: unset;
+  }
+  .section.remarkable-achievements > div:nth-of-type(2) > div > div:nth-of-type(1) {
+    align-items: center;
+  }
+  .section.remarkable-achievements .columns.remarkable-achievements {
+    display: unset;
+  }
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1),
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    align-items: center;
+    gap: unset;
+  }
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div,
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div {
+    width: 84%;
+    padding: 15px;
+  }
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(1) > div > p,
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) > div > p {
+    text-align: center;
+  }
+  .section.remarkable-achievements .columns.remarkable-achievements > div:nth-of-type(2) {
+    margin-top: unset;
+  }
+}/*# sourceMappingURL=remarkable-achievements.css.map */

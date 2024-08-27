@@ -12,6 +12,13 @@
 
 
 @import url('./reset.css');
+@import url('./achievements/achievements.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   /* colors */
@@ -21,13 +28,13 @@
   --light-grullo: #8A93A0;
   --light-grey: #f2f6f9;
   --dark-grey: #DADFE4;
-  --dark-black: #262626;
-  --light-black: #333;
+  --dark-black: #333;
+  --light-black: #262626;
   --dark-grayish: #343A40;
 
   /* heading sizes */
   --heading-font-size-xxl: 32px;
-  --heading-font-size-xl: 28px;
+  --heading-font-size-xl: 44px;
   --heading-font-size-l: 26px;
   --heading-font-size-m: 22px;
   --heading-font-size-s: 20px;
@@ -43,7 +50,6 @@
 body {
   line-height: 1;
   overflow: hidden auto;
-  box-sizing: border-box;
   font-size: var(--font-size-s);
   font-family: poppins-regular, sans-serif;
 }
@@ -133,7 +139,7 @@ h6 {
 @media screen and (width <=767.99px) {
   :root {
     --heading-font-size-xxl: 32px;
-    --heading-font-size-xl: 28px;
+    --heading-font-size-xl: 32px;
     --heading-font-size-l: 26px;
     --heading-font-size-m: 30px;
     --heading-font-size-s: 24px;
