@@ -1,3 +1,192 @@
+.section.hero-banner-fade {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 560px;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .section.think-stocks {
-  background-color: red;
+  .default-content-wrapper {
+    margin-top: 40px;
+    max-width: 1020px;
+
+    p:nth-child(1) {
+      display: inline;
+      margin-top: 40px;
+      font-weight: 700;
+      line-height: 88px;
+      font-size: 4.375rem;
+      letter-spacing: -2.1px;
+      transition: all 1s ease;
+      color: var(--charcoal-gray);
+      font-family: 'poppins-bold', sans-serif;
+    }
+
+    >ul:nth-child(2) {
+      padding-left: 5px;
+      display: inline-flex;
+
+      li {
+        font-weight: 800;
+        line-height: 88px;
+        font-size: 4.375rem;
+        transition: all 1s ease;
+        text-transform: capitalize;
+        color: var(--sunset-orang);
+        font-family: 'poppins-extrabold', sans-serif;
+      }
+
+      li:nth-child(2) {
+        display: none;
+      }
+    }
+
+    p:nth-child(3) {
+      font-weight: 800;
+      line-height: 117px;
+      font-size: 5.625rem;
+      letter-spacing: -2.7px;
+      transition: all 1s ease;
+      color: var(--charcoal-blue);
+      font-family: 'poppins-extrabold', sans-serif;
+    }
+
+    ul:nth-child(4) {
+      display: grid;
+      margin-top: 40px;
+      transition: all 1s ease;
+      grid-template-columns: repeat(5, 1fr);
+
+      >li {
+        gap: 15px;
+        display: flex;
+        padding: 0 15px;
+        align-items: center;
+
+        ul {
+
+          li {
+
+            h3 {
+              line-height: 1px;
+
+              strong {
+                font-weight: 600;
+                line-height: 18px;
+                font-size: 0.875rem;
+                font-family: poppins-semibold, "sans-serif";
+                color: var(--dark-blue);
+              }
+
+              em {
+                font-weight: 400;
+                line-height: 15px;
+                font-style: normal;
+                font-size: 0.75rem;
+                color: var(--light-grullo);
+                font-family: poppins-regular, "sans-serif";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section.hero-banner-fade {
+    display: none;
+  }
+
+  .section.think-stocks {
+    background-color: var(--light-grey);
+
+    .default-content-wrapper {
+      max-width: 85%;
+
+      p:nth-child(1) {
+        line-height: 53px;
+        font-size: 2.625rem;
+      }
+
+      >ul:nth-child(2) {
+        li {
+          line-height: 53px;
+          font-size: 2.625rem;
+        }
+      }
+
+      p:nth-child(3) {
+        line-height: 49px;
+        font-size: 2.375rem;
+      }
+
+      ul:nth-child(4) {
+        gap: 20px 0;
+        grid-template-columns: repeat(3, 1fr);
+
+        >li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .section.hero-banner-fade {
+    height: 400px;
+    display: block;
+  }
+
+  .section.think-stocks {
+    .default-content-wrapper {
+      max-width: 100%;
+      margin-top: 30px;
+
+      p:nth-child(1) {
+        line-height: 38px;
+        font-size: 1.875rem;
+      }
+
+      >ul:nth-child(2) {
+        li {
+          line-height: 38px;
+          font-size: 1.875rem;
+        }
+      }
+
+      p:nth-child(3) {
+        font-size: 2rem;
+        line-height: 42px;
+      }
+
+      ul:nth-child(4) {
+        gap: 0;
+        margin-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+
+        >li {
+          padding: 0;
+          margin: 10px 0;
+
+          span.icon {
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
