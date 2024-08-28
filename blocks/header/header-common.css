@@ -22,6 +22,7 @@ header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrappe
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   padding: 0;
+  margin-top: 24px;
   height: 500px;
   position: fixed;
   left: 17%;
@@ -30,42 +31,55 @@ header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrappe
   display: flex;
   position: relative;
   font-size: 16px;
+  padding: 0;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(2) ul {
-  top: -96px;
+  position: absolute;
+  top: -88px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(3) ul {
-  top: -192px;
+  position: absolute;
+  top: -176px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(4) ul {
-  top: -288px;
+  position: absolute;
+  top: -264px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(5) ul {
-  top: -384px;
+  position: absolute;
+  top: -352px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(6) ul {
-  top: -480px;
+  position: absolute;
+  top: -440px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(7) ul {
-  top: -576px;
+  position: absolute;
+  top: -528px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(8) ul {
-  top: -672px;
+  position: absolute;
+  top: -616px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(9) ul {
-  top: -768px;
+  position: absolute;
+  top: -704px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(10) ul {
-  top: -864px;
+  position: absolute;
+  top: -792px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(11) ul {
-  top: -960px;
+  position: absolute;
+  top: -880px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:nth-child(12) ul {
-  top: -1056px;
+  position: absolute;
+  top: -968px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li p {
-  width: 30%;
+  height: 88px;
+  width: 40%;
   padding: 20px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:hover {
@@ -83,6 +97,7 @@ header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrappe
   border-radius: 0;
   border: none;
   box-shadow: none;
+  margin-top: 0;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li:hover ul li {
   flex-direction: column;
@@ -113,6 +128,15 @@ header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper {
   justify-content: space-between;
   gap: 10px;
 }
+header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper p:nth-child(1) .button {
+  background: #454b54;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper p:nth-child(2) .button {
+  font-size: 12px;
+  padding: 10px 16px;
+}
 header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper ul li h4 {
   font-size: 12px;
   background: #454b54;
@@ -130,13 +154,4 @@ header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper u
 }
 header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper ul li ul li {
   display: none;
-}
-header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper p:nth-child(1) {
-  background: #454b54;
-  padding: 3px 6px;
-  border-radius: 4px;
-}
-header.header-wrapper .header .nav-wrapper .nav-tools .default-content-wrapper .button-container .button {
-  font-size: 12px;
-  padding: 10px 16px;
 }/*# sourceMappingURL=header-common.css.map */
