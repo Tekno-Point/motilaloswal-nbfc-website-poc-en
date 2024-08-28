@@ -32,5 +32,12 @@
   {
     "id": "cards",
     "components": ["card"]
+  },
+  {
+    "id": "swiper",
+    "components": [
+      "column",
+      "swiper"
+    ]
   }
 ]
