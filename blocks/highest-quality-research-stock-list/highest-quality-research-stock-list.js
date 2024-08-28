@@ -1,11 +1,10 @@
 export default async function decorate(block) {
-    const api = block.querySelector('a').href;
-    block.innerHTML = ''
-    debugger
-    const resp = await fetch(api);
-    const data = await resp.json();
-    data.data.forEach(element => {
-        block.innerHTML += `
+  const api = block.querySelector('a').href;
+  block.innerHTML = '';
+  const resp = await fetch(api);
+  const data = await resp.json();
+  data.data.forEach((element) => {
+    block.innerHTML += `
 <a
   id="wt50_OutSystemsUIWeb_wtLayout_block_wtContent_wtMainContent_MO_Website_CW_wt249_block_wtListRecords1_ctl00_wt9"
   tabindex="393"
@@ -49,6 +48,6 @@ export default async function decorate(block) {
     </div>
   </div></a
 >
-`
-    });
+`;
+  });
 }
