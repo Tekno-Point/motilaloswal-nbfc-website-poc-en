@@ -1,5 +1,6 @@
 header.header-wrapper .header .nav-wrapper {
   background-color: #ffffff;
+  top: 0;
 }
 header.header-wrapper .header .nav-wrapper .nav-hamburger button {
   display: none;
@@ -64,7 +65,6 @@ header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrappe
   top: -1056px;
 }
 header.header-wrapper .header .nav-wrapper .nav-sections .default-content-wrapper ul li ul li p {
-  height: 40px;
   width: 30%;
   padding: 20px;
 }
