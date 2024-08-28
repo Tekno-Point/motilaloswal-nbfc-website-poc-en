@@ -453,13 +453,6 @@
         ]
       },
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
