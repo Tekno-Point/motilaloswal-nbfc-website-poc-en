@@ -32,5 +32,9 @@
   {
     "id": "cards",
     "components": ["card"]
+  },
+  {
+    "id": "swiper",
+    "components": ["swiper-item"]
   }
 ]
