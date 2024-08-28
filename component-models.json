@@ -385,28 +385,46 @@
     "fields": [
       {
         "component": "text",
-        "name": "text",
+        "name": "api-url",
         "value": "",
-        "label": "Text",
+        "label": "API Url",
         "valueType": "string"
       }
     ]
   },
   {
-    "id": "form",
+    "id": "lead-form",
     "fields": [
       {
-        "component": "text",
-        "name": "form-url",
+        "component": "multiselect",
+        "name": "classes",
         "value": "",
-        "label": "Form URL",
+        "label": "Form Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Open Demat Account",
+                "value": "open-demat-account"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "text",
+        "name": "form-schema-json",
+        "value": "",
+        "label": "Form Schema JSON",
         "valueType": "string"
       },
       {
         "component": "text",
         "name": "api-url",
         "value": "",
-        "label": "API URL",
+        "label": "API Url",
         "valueType": "string"
       }
     ]
