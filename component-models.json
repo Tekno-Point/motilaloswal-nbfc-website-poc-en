@@ -366,5 +366,100 @@
         "label": "Embed"
       }
     ]
+  },
+  {
+    "id": "investment-opportunity",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "row": true
+      }
+    ]
+  },
+  {
+    "id": "highest-quality-research-stock-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "form-url",
+        "value": "",
+        "label": "Form URL",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "api-url",
+        "value": "",
+        "label": "API URL",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "swiper",
+    "fields": [
+      {
+        "component": "multiselect",
+        "label": "Columns Style",
+        "name": "classes",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Swiper Style",
+            "children": [
+              {
+                "name": "Dot Hide",
+                "value": "dot-hide"
+              },
+              {
+                "name": "Arrow Hide",
+                "value": "arrow-hide"
+              },
+              {
+                "name": "Swipe Hide Desktop",
+                "value": "swiper-hide-desktop"
+              },
+              {
+                "name": "Swipe Hide Mobile",
+                "value": "swiper-hide-Mobile"
+              }
+            ]
+          },
+          {
+            "name": "Event Style",
+            "children": [
+              {
+                "name": "Redirect Column",
+                "value": "redirect-column"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "row": true
+      }
+    ]
   }
 ]

@@ -1,3 +1,171 @@
-.section.think-stocks {
-  background-color: red;
+/* stylelint-disable no-descending-specificity */
+.section.hero-banner-fade {
+  inset: 0;
+  z-index: -1;
+  height: 560px;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.think-stocks .default-content-wrapper {
+  margin-top: 40px;
+  max-width: 1020px;
+}
+
+.section.think-stocks .default-content-wrapper p:nth-child(1) {
+  display: inline;
+  margin-top: 40px;
+  font-weight: 700;
+  line-height: 88px;
+  font-size: 4.375rem;
+  letter-spacing: -2.1px;
+  transition: all 1s ease;
+  color: var(--charcoal-gray);
+  font-family: poppins-bold, sans-serif;
+}
+
+.section.think-stocks .default-content-wrapper > ul:nth-child(2) {
+  padding-left: 5px;
+  display: inline-flex;
+}
+
+.section.think-stocks .default-content-wrapper > ul:nth-child(2) li {
+  font-weight: 800;
+  line-height: 88px;
+  font-size: 4.375rem;
+  transition: all 1s ease;
+  text-transform: capitalize;
+  color: var(--sunset-orang);
+  font-family: poppins-extrabold, sans-serif;
+}
+
+.section.think-stocks .default-content-wrapper > ul:nth-child(2) li:nth-child(2) {
+  display: none;
+}
+
+.section.think-stocks .default-content-wrapper p:nth-child(3) {
+  font-weight: 800;
+  line-height: 117px;
+  font-size: 5.625rem;
+  letter-spacing: -2.7px;
+  transition: all 1s ease;
+  color: var(--charcoal-blue);
+  font-family: poppins-extrabold, sans-serif;
+}
+
+.section.think-stocks .default-content-wrapper ul:nth-child(4) {
+  display: grid;
+  margin-top: 40px;
+  transition: all 1s ease;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.section.think-stocks .default-content-wrapper ul:nth-child(4) > li {
+  gap: 15px;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.section.think-stocks .default-content-wrapper ul:nth-child(4) > li ul li h3 {
+  line-height: 1px;
+}
+
+.section.think-stocks .default-content-wrapper ul:nth-child(4) > li ul li h3 strong {
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 0.875rem;
+  font-family: poppins-semibold, sans-serif;
+  color: var(--dark-blue);
+}
+
+.section.think-stocks .default-content-wrapper ul:nth-child(4) > li ul li h3 em {
+  font-weight: 400;
+  line-height: 15px;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--light-grullo);
+  font-family: poppins-regular, sans-serif;
+}
+
+@media screen and (width >= 768px) and (width <= 1024px) {
+  .section.hero-banner-fade {
+    display: none;
+  }
+
+  .section.think-stocks {
+    background-color: var(--light-grey);
+  }
+
+  .section.think-stocks .default-content-wrapper {
+    max-width: 85%;
+  }
+
+  .section.think-stocks .default-content-wrapper p:nth-child(1) {
+    line-height: 53px;
+    font-size: 2.625rem;
+  }
+
+  .section.think-stocks .default-content-wrapper > ul:nth-child(2) li {
+    line-height: 53px;
+    font-size: 2.625rem;
+  }
+
+  .section.think-stocks .default-content-wrapper p:nth-child(3) {
+    line-height: 49px;
+    font-size: 2.375rem;
+  }
+
+  .section.think-stocks .default-content-wrapper ul:nth-child(4) {
+    gap: 20px 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section.think-stocks .default-content-wrapper ul:nth-child(4) > li {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .section.hero-banner-fade {
+    height: 400px;
+    display: block;
+  }
+
+  .section.think-stocks .default-content-wrapper {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .section.think-stocks .default-content-wrapper p:nth-child(1) {
+    line-height: 38px;
+    font-size: 1.875rem;
+  }
+
+  .section.think-stocks .default-content-wrapper > ul:nth-child(2) li {
+    line-height: 38px;
+    font-size: 1.875rem;
+  }
+
+  .section.think-stocks .default-content-wrapper p:nth-child(3) {
+    font-size: 2rem;
+    line-height: 42px;
+  }
+
+  .section.think-stocks .default-content-wrapper ul:nth-child(4) {
+    gap: 0;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section.think-stocks .default-content-wrapper ul:nth-child(4) > li {
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  .section.think-stocks .default-content-wrapper ul:nth-child(4) > li span.icon img {
+    width: 30px;
+    height: 30px;
+  }
 }
