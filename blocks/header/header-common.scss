@@ -1,6 +1,7 @@
 header.header-wrapper {
   .header {
     .nav-wrapper {
+      background-color: #ffffff;
       .nav-hamburger {
         button {
           display: none;
@@ -13,12 +14,121 @@ header.header-wrapper {
       }
       .nav-sections {
         .default-content-wrapper {
-          p {
+          ul {
             font-size: 1em; //16px
+            align-items: center;
+            gap: 0.626em; //10px
+            li {
+              ul {
+                width: 716px;
+                border-radius: 3px;
+                border: 1px solid #dee2e6;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+                padding: 0;
+                height: 500px;
+                position: fixed;
+                left: 17%;
+                li {
+                  display: flex;
+                  position: relative;
+                  font-size: 16px;
+                  @for $i from 2 through 12 {
+                    &:nth-child(#{$i}) {
+                      ul {
+                        top: -96px * ($i - 1);
+                      }
+                    }
+                  }
+                  p {
+                    height: 40px;
+                    width: 30%;
+                    padding: 20px;
+                  }
+                  &:hover {
+                    background-color: #eff2f5;
+                    ul {
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      align-items: flex-start;
+                      position: absolute;
+                      right: 0;
+                      left: unset;
+                      height: 500px;
+                      z-index: 1;
+                      border-radius: 0;
+                      border: none;
+                      box-shadow: none;
+                      li {
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                      }
+                    }
+                  }
+                  ul {
+                    display: none;
+                    width: calc(100% - 40%);
+                    height: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    top: 0;
+                    background: #eff2f5;
+                    padding: 15px;
+                    position: absolute;
+                    right: 0;
+                  }
+                }
+              }
+            }
+            .button-container {
+              color: #f59f00;
+              font-size: 1em;
+              // margin-left: 0.626em; //10px
+              .button {
+                background: none;
+                padding: 0;
+              }
+            }
           }
         }
       }
       .nav-tools {
+        .default-content-wrapper {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          ul {
+            li {
+              h4 {
+                font-size: 12px;
+                background: #454b54;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-weight: 100;
+                text-transform: uppercase;
+                cursor: pointer;
+                @media screen and (max-width: 480px) {
+                  display: none;
+                }
+              }
+              ul li {
+                display: none;
+              }
+            }
+          }
+          p:nth-child(1) {
+            background: #454b54;
+            padding: 3px 6px;
+            border-radius: 4px;
+          }
+          .button-container {
+            .button {
+              font-size: 12px;
+              padding: 10px 16px;
+            }
+          }
+        }
       }
     }
   }
