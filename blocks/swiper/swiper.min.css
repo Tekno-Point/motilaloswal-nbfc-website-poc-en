@@ -1,3 +1,4 @@
+/* stylelint-disable */
 /**
  * Swiper 11.1.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -58,7 +59,7 @@
 .swiper-android .swiper-slide,
 .swiper-ios .swiper-slide,
 .swiper-wrapper {
-    transform: translate3d(0px, 0, 0)
+    transform: translate3d(0, 0, 0)
 }
 
 .swiper-horizontal {
@@ -94,7 +95,6 @@
 
 .swiper-backface-hidden .swiper-slide {
     transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden
 }
 
@@ -191,23 +191,23 @@
 }
 
 .swiper-3d .swiper-slide-shadow {
-    background: rgba(0, 0, 0, .15)
+    background: rgb(0 0 0 / 15%)
 }
 
 .swiper-3d .swiper-slide-shadow-left {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+    background-image: linear-gradient(to left, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%))
 }
 
 .swiper-3d .swiper-slide-shadow-right {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+    background-image: linear-gradient(to right, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%))
 }
 
 .swiper-3d .swiper-slide-shadow-top {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+    background-image: linear-gradient(to top, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%))
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+    background-image: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%))
 }
 
 .swiper-lazy-preloader {
@@ -250,7 +250,7 @@
 }
 
 .swiper-virtual .swiper-slide {
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     transform: translateZ(0)
 }
 
@@ -339,8 +339,8 @@
     display: none
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
     font-family: swiper-icons;
     font-size: var(--swiper-navigation-size);
     text-transform: none !important;
@@ -349,8 +349,8 @@
     line-height: 1
 }
 
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after {
     content: 'prev'
 }
 
@@ -360,8 +360,8 @@
     left: auto
 }
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
     content: 'next'
 }
 
@@ -440,7 +440,6 @@ button.swiper-pagination-bullet {
     margin: 0;
     padding: 0;
     box-shadow: none;
-    -webkit-appearance: none;
     appearance: none
 }
 
@@ -462,7 +461,7 @@ button.swiper-pagination-bullet {
     right: var(--swiper-pagination-right, 8px);
     left: var(--swiper-pagination-left, auto);
     top: 50%;
-    transform: translate3d(0px, -50%, 0)
+    transform: translate3d(0, -50%, 0)
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -510,7 +509,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-progressbar {
-    background: var(--swiper-pagination-progressbar-bg-color, rgba(0, 0, 0, .25));
+    background: var(--swiper-pagination-progressbar-bg-color, rgb(0 0 0 / 25%));
     position: absolute
 }
 
@@ -557,7 +556,7 @@ button.swiper-pagination-bullet {
     border-radius: var(--swiper-scrollbar-border-radius, 10px);
     position: relative;
     touch-action: none;
-    background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, .1))
+    background: var(--swiper-scrollbar-bg-color, rgb(0 0 0 / 10%))
 }
 
 .swiper-scrollbar-disabled>.swiper-scrollbar,
@@ -591,7 +590,7 @@ button.swiper-pagination-bullet {
     height: 100%;
     width: 100%;
     position: relative;
-    background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, .5));
+    background: var(--swiper-scrollbar-drag-bg-color, rgb(0 0 0 / 50%));
     border-radius: var(--swiper-scrollbar-border-radius, 10px);
     left: 0;
     top: 0
@@ -646,8 +645,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-grid-column>.swiper-wrapper {
-    flex-wrap: wrap;
-    flex-direction: column
+    flex-flow: column wrap
 }
 
 .swiper-fade.swiper-free-mode .swiper-slide {
@@ -677,7 +675,6 @@ button.swiper-pagination-bullet {
 
 .swiper-cube .swiper-slide {
     pointer-events: none;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: 1;
     visibility: hidden;
@@ -709,21 +706,18 @@ button.swiper-pagination-bullet {
 .swiper-cube .swiper-cube-shadow {
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     height: 100%;
     opacity: .6;
     z-index: 0
 }
 
-.swiper-cube .swiper-cube-shadow:before {
+.swiper-cube .swiper-cube-shadow::before {
     content: '';
     background: #000;
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    inset: 0;
     filter: blur(50px)
 }
 
@@ -737,7 +731,6 @@ button.swiper-pagination-bullet {
 .swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-right,
 .swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-top {
     z-index: 0;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden
 }
 
@@ -747,7 +740,6 @@ button.swiper-pagination-bullet {
 
 .swiper-flip .swiper-slide {
     pointer-events: none;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     z-index: 1
 }
@@ -766,12 +758,10 @@ button.swiper-pagination-bullet {
 .swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-right,
 .swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-top {
     z-index: 0;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden
 }
 
 .swiper-creative .swiper-slide {
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
     transition-property: transform, opacity, height
@@ -783,7 +773,6 @@ button.swiper-pagination-bullet {
 
 .swiper-cards .swiper-slide {
     transform-origin: center bottom;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden
 }
