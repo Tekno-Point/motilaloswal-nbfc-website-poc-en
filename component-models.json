@@ -405,8 +405,8 @@
             "name": "Content Style",
             "children": [
               {
-                "name": "Lead Form",
-                "value": "lead-form"
+                "name": "Open Demat Account",
+                "value": "open-demat-account"
               }
             ]
           }
@@ -425,25 +425,6 @@
         "name": "api-url",
         "value": "",
         "label": "API Url",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "text",
-        "name": "form-url",
-        "value": "",
-        "label": "Form URL",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "api-url",
-        "value": "",
-        "label": "API URL",
         "valueType": "string"
       }
     ]
