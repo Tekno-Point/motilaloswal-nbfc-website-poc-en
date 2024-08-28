@@ -385,9 +385,9 @@
     "fields": [
       {
         "component": "text",
-        "name": "text",
+        "name": "api-url",
         "value": "",
-        "label": "Text",
+        "label": "API Url",
         "valueType": "string"
       }
     ]
