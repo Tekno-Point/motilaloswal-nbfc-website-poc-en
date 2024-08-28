@@ -1,7 +1,7 @@
 [
   {
     "id": "main",
-    "components": ["section", "swiper"]
+    "components": ["section"]
   },
   {
     "id": "columns",
@@ -9,7 +9,7 @@
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title", "swiper"]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "section",
@@ -32,9 +32,5 @@
   {
     "id": "cards",
     "components": ["card"]
-  },
-  {
-    "id": "swiper",
-    "components": ["columns"]
   }
 ]
