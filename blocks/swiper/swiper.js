@@ -2,7 +2,9 @@
 import Swiper from './swiper.min.js';
 
 export default function decorate(block) {
-  block.innerHTML = `
+    console.log(block);
+    
+  /* block.innerHTML = `
     <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">Slide 1</div>
@@ -50,5 +52,5 @@ export default function decorate(block) {
         slidesPerView: 1,
       },
     },
-  });
+  }); */
 }
