@@ -393,6 +393,43 @@
     ]
   },
   {
+    "id": "lead-form",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Form Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Lead Form",
+                "value": "lead-form"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "text",
+        "name": "form-schema-json",
+        "value": "",
+        "label": "Form Schema JSON",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "api-url",
+        "value": "",
+        "label": "API Url",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "form",
     "fields": [
       {

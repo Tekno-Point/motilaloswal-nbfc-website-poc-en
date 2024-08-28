@@ -1,7 +1,7 @@
 [
   {
     "id": "main",
-    "components": ["section","swiper"]
+    "components": ["section", "swiper"]
   },
   {
     "id": "columns",
@@ -9,7 +9,7 @@
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title","swiper"]
+    "components": ["text", "image", "button", "title", "swiper"]
   },
   {
     "id": "section",
@@ -25,6 +25,7 @@
       "embed",
       "investment-opportunity",
       "highest-quality-research-stock-list",
+      "lead-form",
       "form",
       "swiper"
     ]
@@ -35,8 +36,6 @@
   },
   {
     "id": "swiper",
-    "components": [
-      "columns"
-    ]
+    "components": ["columns"]
   }
 ]
