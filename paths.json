@@ -2,6 +2,7 @@
   "mappings": [
     "/content/motilal-oswal/:/",
     "/content/motilal-oswal/forms/form-schema:/forms/form-schema.json",
+    "/content/motilal-oswal/forms/modal-form:/forms/modal-form.json",
     "/content/motilal-oswal/api/highest-quality-research:/api/highest-quality-research.json",
     "/content/motilal-oswal/forms/generate-lead:/forms/generate-lead.json",
     "/content/motilal-oswal/forms/lead:/forms/lead.json",
