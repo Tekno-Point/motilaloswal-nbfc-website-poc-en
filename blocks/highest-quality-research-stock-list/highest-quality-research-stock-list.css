@@ -1,3 +1,128 @@
-.block.highest-quality-research {
-  background-color: red;
+/* stylelint-disable no-descending-specificity */
+.highest-quality-research-stock-list-container > div > p {
+  margin: 10px;
+  text-align: center;
+}
+
+.highest-quality-research-stock-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.highest-quality-research-stock-list > div {
+  background: linear-gradient(119deg, #FFF 0%, #E8E8E8 100%);
+  box-shadow: 0 16px 40px 0 rgb(112 144 176 / 30%), 4px 4px 12px 0 rgb(30 51 72 / 15%), 2px 2px 5px 0 rgb(0 0 0 / 5%);
+  flex: 0 0 23%;
+  position: relative;
+  margin-left: 12px;
+  margin-right: 12px;
+  max-width: 23%;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper::before {
+  content: "";
+  background: url("../../icons/lock.svg") no-repeat;
+  position: absolute;
+  left: calc(50% - 15px);
+  bottom: 60px;
+  height: 40px;
+  width: 32px;
+  z-index: 10;
+  background-size: 32px 40px;
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 150px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  background: rgb(255 255 255 / 1%);
+  backdrop-filter: blur(18px);
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper .card-title {
+  height: 56px;
+  margin: 16px 0;
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper .card-title span {
+  align-self: start;
+  font-size: 18px;
+  font-family: poppins-semibold, serif;
+  font-weight: var(--font-semi-bold);
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper .card-price > div > div:last-child {
+  margin-top: 5px;
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper .card-return {
+  margin-top: 16px;
+}
+
+.highest-quality-research-stock-list > div > a .card-wrapper .card-return > div:last-child {
+  font-size: 24px;
+}
+
+.highest-quality-research-stock-list > div:nth-child(-n+2) > a .card-wrapper::before, .highest-quality-research-stock-list > div:nth-child(-n+2) > a .card-wrapper::after {
+  content: unset;
+}
+
+.greylabel span {
+  background: #E4E4E4;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #454B54;
+  font-size: 12px;
+}
+
+.lightgrey {
+  color: var(--light-grullo);
+  font-size: 14px;
+}
+
+.greencolor {
+  color: #049C2E;
+  font-family: poppins-semibold, serif;
+  font-weight: var(--font-semi-bold);
+}
+
+@media screen and (width <= 767.99px) {
+  .highest-quality-research-stock-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: unset;
+  }
+
+  .highest-quality-research-stock-list > div {
+    width: 100%;
+    max-width: unset;
+    margin: unset;
+    margin-bottom: 24px;
+    padding: 15px;
+  }
+
+  .highest-quality-research-stock-list > div > a .card-wrapper::after {
+    height: 90px;
+  }
+
+  .highest-quality-research-stock-list > div > a .card-wrapper::before {
+    bottom: 35px;
+  }
+
+  .highest-quality-research-stock-list > div > a .card-wrapper .card-title {
+    height: unset;
+  }
 }
