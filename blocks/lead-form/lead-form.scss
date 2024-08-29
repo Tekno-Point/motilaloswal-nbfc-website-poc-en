@@ -1,0 +1,42 @@
+.block.lead-form {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 8px;
+    box-shadow: 0px 8px 24px 0px rgba(115, 96, 0, 0.15);
+
+    form {
+        display: flex;
+
+        >div {
+            label {
+                display: none;
+            }
+
+            input {
+                background: #F2F5F9;
+                border: none;
+                height: 40px;
+                width: 250px;
+                padding: 0 16px;
+                border-radius: 4px;
+            }
+
+            .button {
+                border-radius: 0px 6px 6px 0px;
+                background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
+                box-shadow: 0px 4px 7px 0px rgba(50, 77, 103, 0.15);
+                border: none;
+                font-size: 12px;
+                align-items: center;
+                padding: 16px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.section .lead-form-wrapper{
+    max-width: 1020px;
+}
