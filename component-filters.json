@@ -26,12 +26,31 @@
       "investment-opportunity",
       "highest-quality-research-stock-list",
       "lead-form",
-      "swiper"
+      "swiper",
+      "container"
     ]
   },
   {
     "id": "cards",
     "components": ["card"]
+  },
+  {
+    "id": "container",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "embed",
+      "investment-opportunity",
+      "highest-quality-research-stock-list",
+      "lead-form",
+      "swiper"
+    ]
   },
   {
     "id": "swiper",

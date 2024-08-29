@@ -482,5 +482,28 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "container",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Form Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Open Demat Account",
+                "value": "open-demat-account"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      }
+    ]
   }
 ]
