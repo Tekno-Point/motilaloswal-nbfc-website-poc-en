@@ -2,7 +2,7 @@ import { loadFragment } from '../fragment/fragment.js';
 import {
   buildBlock, decorateBlock, loadBlock, loadCSS,
 } from '../../scripts/aem.js';
-import decorate from '../lead-form/lead-form.js';
+// import decorate from '../lead-form/lead-form.js';
 
 /*
   This is not a traditional block, so there is no decorate function.
