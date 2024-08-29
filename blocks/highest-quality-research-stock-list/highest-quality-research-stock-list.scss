@@ -1,0 +1,160 @@
+.highest-quality-research-stock-list-container {
+    >div {
+        >p {
+            margin: 10px;
+            text-align: center;
+        }
+    }
+}
+
+.highest-quality-research-stock-list {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    >div {
+        background: linear-gradient(119deg, #FFF 0%, #E8E8E8 100%);
+        box-shadow: 0px 16px 40px 0px rgba(112, 144, 176, 0.30), 4px 4px 12px 0px rgba(30, 51, 72, 0.15), 2px 2px 5px 0px rgba(0, 0, 0, 0.05);
+        flex: 0 0 23%;
+        position: relative;
+        margin-left: 12px;
+        margin-right: 12px;
+        max-width: 23%;
+        padding: 24px;
+        margin-bottom: 24px;
+
+        >a {
+            .card-wrapper {
+
+                &::before {
+                    content: "";
+                    background: url(../../icons/lock.svg) no-repeat;
+                    position: absolute;
+                    left: calc(50% - 15px);
+                    bottom: 60px;
+                    height: 40px;
+                    width: 32px;
+                    z-index: 10;
+                    background-size: 32px 40px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 150px;
+                    left: 0px;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 9;
+                    background: rgba(255, 255, 255, 0.01);
+                    backdrop-filter: blur(18px);
+                }
+
+                >div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .card-title {
+                    height: 56px;
+                    margin: 16px 0;
+
+                    span {
+                        align-self: start;
+                        font-size: 18px;
+                        font-family: poppins-semibold,serif;
+                        font-weight: var(--font-semi-bold);
+                    }
+                }
+
+                .card-price {
+                    >div {
+                        >div:last-child {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+
+                .card-return {
+                    margin-top: 16px;
+
+                    >div:last-child {
+                        font-size: 24px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    >div:nth-child(-n+2) {
+        >a {
+            .card-wrapper {
+
+                &::before,
+                &::after {
+                    content: unset;
+                }
+            }
+
+        }
+    }
+}
+
+
+.greylabel {
+    span {
+        background: #E4E4E4;
+        border-radius: 4px;
+        padding: 4px 8px;
+        color: #454B54;
+        font-size: 12px;
+    }
+}
+
+.lightgrey {
+    color: var(--light-grullo);
+    font-size: 14px;
+}
+
+.greencolor {
+    color: #049C2E;
+    font-family: poppins-semibold,serif;
+    font-weight: var(--font-semi-bold);
+}
+
+
+@media screen and (width <=767.99px) {
+    .highest-quality-research-stock-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: unset;
+
+        >div {
+            width: 100%;
+            max-width: unset;
+            margin: unset;
+            margin-bottom: 24px;
+            padding: 15px;
+
+
+            >a {
+                .card-wrapper {
+                    &::after {
+                        height: 90px;
+                    }
+
+                    &::before {
+                        bottom: 35px;
+                    }
+
+                    .card-title {
+                        height: unset;
+                    }
+
+                }
+            }
+        }
+    }
+}

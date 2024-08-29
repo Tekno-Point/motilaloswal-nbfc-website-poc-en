@@ -200,7 +200,7 @@
   },
   {
     "id": "card",
-    "fields": [ 
+    "fields": [
       {
         "component": "reference",
         "valueType": "string",
@@ -235,10 +235,6 @@
                 "value": "light-grey"
               },
               {
-                "name": "Light Grey",
-                "value": "light-grey"
-              },
-              {
                 "name": "Dark Grey",
                 "value": "dark-grey"
               },
@@ -249,6 +245,15 @@
               {
                 "name": "Dark Black",
                 "value": "dark-black"
+              }
+            ]
+          },
+          {
+            "name": "Background Image",
+            "children": [
+              {
+                "name": "Hero Banner Fade",
+                "value": "hero-banner-fade"
               }
             ]
           },
@@ -359,6 +364,167 @@
         "component": "text",
         "name": "embed",
         "label": "Embed"
+      }
+    ]
+  },
+  {
+    "id": "investment-opportunity",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "row": true
+      }
+    ]
+  },
+  {
+    "id": "highest-quality-research-stock-list",
+    "fields": [
+      {
+        "component": "text",
+        "name": "api-url",
+        "value": "",
+        "label": "API Url",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "lead-form",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Form Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Open Demat Account",
+                "value": "open-demat-account"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "text",
+        "name": "form-schema-json",
+        "value": "",
+        "label": "Form Schema JSON",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "api-url",
+        "value": "",
+        "label": "API Url",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Hero Carousel",
+                "value": "hero-carousel"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
+              },
+              {
+                "name": "One Half Carousel",
+                "value": "one-half-carousel"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "boolean",
+        "label": "Infinite",
+        "name": "infinite",
+        "value": "",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Hero Carousel",
+                "value": "hero-carousel"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
+              },
+              {
+                "name": "One Half Carousel",
+                "value": "one-half-carousel"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Carousel Heading"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "Carousel Heading Type",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          }
+        ]
       }
     ]
   }

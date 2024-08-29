@@ -1,0 +1,61 @@
+.section.market-leaders-reason.cards-container .cards-wrapper {
+  margin: auto;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block {
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul {
+  display: block;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li {
+  display: flex;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li:first-child {
+  margin-top: initial;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li:nth-child(2) {
+  justify-content: flex-end;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li:nth-child(3) {
+  justify-content: flex-start;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li:nth-child(4) {
+  justify-content: flex-end;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-image {
+  height: 80px;
+  width: 80px;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-image picture img {
+  aspect-ratio: initial;
+  object-fit: initial;
+  width: 80px;
+  height: 80px;
+}
+@media only screen and (max-width: 768px) {
+  .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-image picture img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-body {
+  display: flex;
+  align-items: center;
+  margin: initial;
+}
+.section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-body p {
+  font-size: 18px;
+  color: #8A93A0 !important;
+  font-family: "Poppins", sans-serif;
+  margin-left: 30px;
+}/*# sourceMappingURL=market-leaders-reason.css.map */

@@ -22,11 +22,19 @@
       "cards",
       "columns",
       "fragment",
-      "embed"
+      "embed",
+      "investment-opportunity",
+      "highest-quality-research-stock-list",
+      "lead-form",
+      "carousel"
     ]
   },
   {
     "id": "cards",
     "components": ["card"]
+  },
+  {
+    "id": "carousel",
+    "components": ["carousel-item", "embed", "image"]
   }
 ]
