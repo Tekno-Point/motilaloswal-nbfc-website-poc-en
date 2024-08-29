@@ -479,5 +479,17 @@
         "row": true
       }
     ]
+  },
+  {
+    "id": "swiper-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "api-url",
+        "value": "",
+        "label": "API Url",
+        "valueType": "string"
+      }
+    ]
   }
 ]
