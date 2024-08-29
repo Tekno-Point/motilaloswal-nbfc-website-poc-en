@@ -35,6 +35,6 @@
   },
   {
     "id": "carousel",
-    "components": ["carousel-item"]
+    "components": ["carousel-item", "embed", "image"]
   }
 ]
