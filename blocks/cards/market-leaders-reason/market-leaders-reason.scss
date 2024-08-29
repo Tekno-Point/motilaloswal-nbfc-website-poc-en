@@ -45,6 +45,12 @@
                                 img {
                                     aspect-ratio: initial;
                                     object-fit: initial;
+                                    width: 80px;
+                                    height: 80px;
+                                    @media only screen and (max-width: 768px) {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
                                 }
                             }
                         }

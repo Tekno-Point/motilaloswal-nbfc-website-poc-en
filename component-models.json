@@ -458,15 +458,6 @@
                 "value": "swiper-hide-Mobile"
               }
             ]
-          },
-          {
-            "name": "Event Style",
-            "children": [
-              {
-                "name": "Redirect Column",
-                "value": "redirect-column"
-              }
-            ]
           }
         ]
       },
