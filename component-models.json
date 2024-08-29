@@ -428,5 +428,104 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Hero Carousel",
+                "value": "hero-carousel"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
+              },
+              {
+                "name": "One Half Carousel",
+                "value": "one-half-carousel"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "boolean",
+        "label": "Infinite",
+        "name": "infinite",
+        "value": "",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Hero Carousel",
+                "value": "hero-carousel"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
+              },
+              {
+                "name": "One Half Carousel",
+                "value": "one-half-carousel"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Carousel Heading"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "Carousel Heading Type",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          }
+        ]
+      }
+    ]
   }
 ]
