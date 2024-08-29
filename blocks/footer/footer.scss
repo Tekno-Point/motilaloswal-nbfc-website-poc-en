@@ -10,6 +10,7 @@
       position: relative;
 
       >p {
+        width: 10%;
         white-space: nowrap;
         display: inline;
         color: var(--white);
@@ -19,13 +20,13 @@
         top: 0;
         bottom: 0;
         text-align: center;
-        background-color: var(--dark-charcoa);
+        background-color: var(--light-black);
       }
 
       >ol {
         display: inline-block;
         white-space: nowrap;
-        animation: scroll 18s linear infinite;
+        animation: scroll 180s linear infinite;
 
         >li {
           list-style: auto;

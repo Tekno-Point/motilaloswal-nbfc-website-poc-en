@@ -2,6 +2,7 @@ import { loadFragment } from '../fragment/fragment.js';
 import {
   buildBlock, decorateBlock, loadBlock, loadCSS,
 } from '../../scripts/aem.js';
+import decorate from '../lead-form/lead-form.js';
 
 /*
   This is not a traditional block, so there is no decorate function.
@@ -28,6 +29,7 @@ export async function createModal(contentNodes) {
   const block = buildBlock('modal', '');
   document.querySelector('main').append(block);
   decorateBlock(block);
+  // decorate(block);
   await loadBlock(block);
 
   // close on click outside the dialog
