@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .footer > div > div:nth-of-type(1) {
   padding: 60px 0 20px;
 }
@@ -11,6 +12,7 @@
 }
 
 .footer > div > div:nth-of-type(1) div > p {
+  width: 10%;
   white-space: nowrap;
   display: inline;
   color: var(--white);
@@ -20,13 +22,13 @@
   top: 0;
   bottom: 0;
   text-align: center;
-  background-color: var(--dark-charcoa);
+  background-color: var(--light-black);
 }
 
 .footer > div > div:nth-of-type(1) div > ol {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll 18s linear infinite;
+  animation: scroll 180s linear infinite;
 }
 
 .footer > div > div:nth-of-type(1) div > ol > li {
@@ -95,7 +97,7 @@
 }
 
 .footer > div > div:nth-of-type(3) > div ul li:last-child ul li::after {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 15px;
@@ -232,13 +234,8 @@
     padding-top: 40px;
   }
 
-
   .footer > div > div:nth-of-type(3) > div ul {
     flex-wrap: wrap;
-  }
-  
-  .footer > div > div:nth-of-type(2) > div div div ul {
-    margin-bottom: 30px;
   }
 
   .footer > div > div:nth-of-type(3) > div ul li:first-child {
@@ -258,6 +255,9 @@
     row-gap: 7px;
   }
 
+  .footer > div > div:nth-of-type(2) > div div div ul {
+    margin-bottom: 30px;
+  }
 
   .footer > div > div:nth-of-type(2) > div div div div:first-child {
     flex: 0 0 100%;
