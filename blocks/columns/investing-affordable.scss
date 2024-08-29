@@ -1,55 +1,96 @@
-.columns.making-investing-affordable {
+.section.making-investing-affordable {
+  padding: 80px 0;
+
+  h2 {
+    color: var(--white);
+  }
+
+  .button-container {
     margin-top: 40px;
+  }
 }
 
 .columns.making-investing-affordable {
+  margin-top: 40px;
+
+  div {
     div {
-        div {
-            position: relative;
-            margin-bottom: 32px;
-        }
-
-        div::after {
-            content: "";
-            position: absolute;
-            height: 120px;
-            width: 1px;
-            background: #D8DFE85C;
-            right: -15px;
-            top: 0;
-            opacity: 0.6;
-        }
-
-        div:last-child::after{
-            content: none;
-        } 
+      position: relative;
+      margin-bottom: 32px;
     }
+
+    div::after {
+      content: '';
+      position: absolute;
+      height: 120px;
+      width: 1px;
+      background: #d8dfe85c;
+      right: -15px;
+      top: 0;
+      opacity: 0.6;
+    }
+
+    div:last-child::after {
+      content: none;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: var(--white);
+    font-family: poppins-regular, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    strong {
+      font-size: 56px;
+      line-height: 84px;
+      font-family: poppins-semibold, sans-serif;
+      font-weight: 600;
+    }
+  }
 }
 
-.columns.making-investing-affordable {
+@media only screen and (width <= 768px) {
+  .section.making-investing-affordable {
+    padding: 30px 0;
+
+    .button-container {
+      margin-top: 20px;
+    }
+  }
+
+  .columns.making-investing-affordable {
+    margin-top: 20px;
+
+    div {
+      div {
+        margin-bottom: 20px;
+      }
+    }
+
     p {
-        text-align: center;
-        color: var(--white);
-        font-family: poppins-regular, sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 21px;
+      font-size: 12px;
+      line-height: 18px;
+    
+      strong {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
+  }
 }
 
-.columns.making-investing-affordable {
-    p {
-        strong {
-            font-size: 56px;
-            line-height: 84px;
-            font-family: poppins-semibold, sans-serif;
-            font-weight: 600;
-        }
-    }
-}
-
-// .columns.making-investing-affordable {
-//     .button-container{
-//         margin-top: 40px;
+// @media only screen and (min-width: 768px) and (max-width: 1024px) {
+//     .columns.making-investing-affordable {
+//         div{
+//             flex-direction: row;
+//             gap: 32px;
+//             div{
+//                 padding: 0 16px;
+//             }
+//         }
 //     }
 // }
+
