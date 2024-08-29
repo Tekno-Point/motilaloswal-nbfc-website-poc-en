@@ -1,0 +1,11 @@
+@import url("./swiper.min.css");
+
+.block.carousel {
+  color: red;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  top: unset;
+  display: none;
+}
