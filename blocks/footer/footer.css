@@ -1,6 +1,7 @@
 .footer > div > div:nth-of-type(1) {
   padding: 60px 0 20px;
 }
+
 .footer > div > div:nth-of-type(1) div {
   display: flex;
   gap: 20px;
@@ -8,6 +9,7 @@
   white-space: nowrap;
   position: relative;
 }
+
 .footer > div > div:nth-of-type(1) div > p {
   white-space: nowrap;
   display: inline;
@@ -20,11 +22,13 @@
   text-align: center;
   background-color: var(--dark-charcoa);
 }
+
 .footer > div > div:nth-of-type(1) div > ol {
   display: inline-block;
   white-space: nowrap;
   animation: scroll 18s linear infinite;
 }
+
 .footer > div > div:nth-of-type(1) div > ol > li {
   list-style: auto;
   display: inline-block;
@@ -32,6 +36,7 @@
   color: var(--white);
   font-size: 14px;
 }
+
 .footer > div > div:nth-of-type(4) > div ul {
   display: flex;
   flex-direction: column;
@@ -39,6 +44,7 @@
   padding: 30px 0;
   border-bottom: 1px solid #454b54;
 }
+
 .footer > div > div:nth-of-type(4) > div ul li {
   font-size: 10px;
   color: #8a93a0;
@@ -46,32 +52,43 @@
   font-family: poppins-regular, sans-serif;
   font-weight: 400;
 }
+
 .footer > div > div:nth-of-type(4) > div ul li a {
   cursor: pointer;
   color: #ee5600;
 }
+
 .footer > div > div:nth-of-type(3) > div ul {
   display: flex;
   align-items: center;
   padding-bottom: 20px;
 }
+
 .footer > div > div:nth-of-type(3) > div ul li:first-child {
   flex: 0 0 17%;
 }
+
 .footer > div > div:nth-of-type(3) > div ul li:first-child p {
   font-size: 16px;
   line-height: 24px;
   color: #bcbcbc;
 }
+
 .footer > div > div:nth-of-type(3) > div ul li:last-child {
   flex: 0 0 80%;
 }
+
+.footer > div > div:nth-of-type(2) > div div div ul {
+  margin-bottom: 30px;
+}
+
 .footer > div > div:nth-of-type(3) > div ul li:last-child ul {
   padding: 0;
   gap: 0;
   padding-left: 15px;
   align-items: center;
 }
+
 .footer > div > div:nth-of-type(3) > div ul li:last-child ul li {
   display: inline-block;
   padding-right: 12px;
@@ -80,6 +97,7 @@
   color: #bcbcbc !important;
   flex: unset;
 }
+
 .footer > div > div:nth-of-type(3) > div ul li:last-child ul li::after {
   content: "";
   display: block;
@@ -90,76 +108,93 @@
   right: 0;
   top: -1px;
 }
+
 .footer > div > div:nth-of-type(3) > div ul li:last-child ul li:last-child::after {
   content: none;
 }
+
 .footer > div > div:nth-of-type(2) > div {
   padding-top: 40px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:last-child {
   display: flex;
   flex: 0 0 65%;
   max-width: 65%;
   flex-wrap: wrap;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:last-child ul {
   padding-left: 40px;
   margin-bottom: 45px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:last-child ul li {
   color: #8a93a0;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 8px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:last-child ul li em {
   font-size: 16px;
   line-height: 24px;
   font-style: normal;
   color: #bcbcbc;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child {
   flex: 0 0 28%;
   max-width: 28%;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul {
   margin-bottom: 30px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul li {
   color: #8a93a0;
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 8px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul li em {
   font-size: 16px;
   line-height: 24px;
   font-style: normal;
   color: #bcbcbc;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul li span > img {
   height: 24px;
   width: 24px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul:nth-of-type(4) {
   display: flex;
   margin-bottom: 50px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul:nth-of-type(4) li {
   margin: 0 10px 0 0;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul:nth-of-type(5) {
   margin: 0;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul:nth-of-type(6) {
   display: flex;
   gap: 20px;
   margin-top: 20px;
 }
+
 .footer > div > div:nth-of-type(2) > div div div div:first-child ul:nth-of-type(6) li > a > span > img {
   width: 132px;
   height: 38px;
@@ -169,67 +204,81 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
+
 @media only screen and (width >= 769px) and (width <= 1024px) {
   .footer > div > div:nth-of-type(3) > div ul {
     flex-wrap: wrap;
   }
+
   .footer > div > div:nth-of-type(3) > div ul li:last-child ul {
     row-gap: 7px;
   }
+
   .footer > div > div:nth-of-type(2) > div div div {
     flex-direction: row;
     flex-wrap: unset;
   }
+
   .footer > div > div:nth-of-type(2) > div div div div:last-child {
     flex: 0 0 70%;
     max-width: 70%;
     justify-content: unset;
   }
 }
+
 @media only screen and (width <= 768px) {
   .footer > div > div:nth-of-type(4) > div ul {
     padding-top: 40px;
   }
+
   .footer > div > div:nth-of-type(3) > div ul {
     flex-wrap: wrap;
   }
+
   .footer > div > div:nth-of-type(3) > div ul li:first-child {
     flex: 0 0 100%;
   }
+
   .footer > div > div:nth-of-type(3) > div ul li:first-child p {
     margin-bottom: 10px;
   }
+
   .footer > div > div:nth-of-type(3) > div ul li:last-child {
     flex: 0 0 100%;
   }
+
   .footer > div > div:nth-of-type(3) > div ul li:last-child ul {
     padding-left: 0;
     row-gap: 7px;
   }
-  .footer > div > div:nth-of-type(2) > div div div ul {
-    margin-bottom: 30px;
-  }
+
+  
+
   .footer > div > div:nth-of-type(2) > div div div div:first-child {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .footer > div > div:nth-of-type(2) > div div div div:last-child {
     flex: 0 0 70%;
     max-width: 70%;
     justify-content: space-between;
   }
+
   .footer > div > div:nth-of-type(2) > div div div div:last-child ul {
     padding-left: 30px;
     margin-bottom: 30px;
     padding-right: 10px;
   }
 }
+
 @media only screen and (width <= 575px) {
   .footer > div > div:nth-of-type(2) > div div div div:last-child ul {
     padding-left: 0;
   }
-}/*# sourceMappingURL=footer.css.map */
+}
