@@ -29,7 +29,7 @@ export default function decorate(block) {
   configData.navigation.nextEl = swiperButtonNext;
   configData.navigation.prevEl = swiperButtonPrev;
   configData.pagination.el = swiperPagination;
-  block.classList.add('mySwiper');
+  block.classList.add('swiper', 'mySwiper');
   block.append(swiperWrapper);
   block.append(swiperButtonNext);
   block.append(swiperButtonPrev);

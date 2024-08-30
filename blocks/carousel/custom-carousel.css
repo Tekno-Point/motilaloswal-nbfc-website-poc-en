@@ -1,0 +1,28 @@
+.section.carousel-container {
+  padding: unset;
+}
+
+.swiper {
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+.swiper .swiper-pagination {
+  margin-top: 25px;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  display: none;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #D24D57;
+  width: 25px;
+  border-radius: 20px;
+}
+
+.swiper .swiper-slide > div > picture > img {
+  width: 100%;
+  object-fit: fill;
+}
