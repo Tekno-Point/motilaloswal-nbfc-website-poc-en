@@ -303,6 +303,10 @@
               {
                 "name": "Go To Top",
                 "value": "go-to-top"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
               }
             ]
           },
