@@ -1,9 +1,9 @@
 const heroCarousel = {
-  loop: true,
+  // loop: true,
   slidesPerView: 1,
   grabCursor: true,
   autoplay: {
-    delay: 5000,
+    delay: 500000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -34,8 +34,8 @@ const oneHalfCarousel = {
   slidesPerView: 2,
   grabCursor: true,
   autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+    // delay: 5000,
+    // disableOnInteraction: false,
   },
   navigation: {
     // nextEl: swiperButtonNext,
@@ -47,10 +47,12 @@ const oneHalfCarousel = {
   },
   breakpoints: {
     300: {
-      slidesPerView: 2,
+      slidesPerView: 1,
+      grabCursor: true,
     },
     780: {
-      slidesPerView: 2,
+      slidesPerView: 1,
+      grabCursor: true,
     },
     992: {
       slidesPerView: 2,

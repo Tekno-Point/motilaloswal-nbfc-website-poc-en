@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .block.open-demat-account form > div:nth-of-type(1) > p {
   color: var(--white);
   font-size: 24px;
@@ -65,37 +66,6 @@
   width: 100%;
 }
 
-@media only screen and (width <= 768px) {
-  main {
-    position: relative;
-  }
-
-  .section .lead-form-wrapper {
-    max-width: unset;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 3;
-  }
-
-  .block.banner-open-demat-account {
-    width: 100%;
-    background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
-    box-shadow: 0 8px 13px 0 rgb(50 77 103 / 15%);
-    margin-top: 20px;
-    padding: 10px;
-  }
-
-  .block.banner-open-demat-account form > div input {
-    width: unset;
-    border-radius: 4px 0 0 4px;
-  }
-
-  .block.banner-open-demat-account form > div .button {
-    color: var(--white);
-    font-size: 10px;
-    background: #333;
-    box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 25%);
-    padding: 20px;
-  }
+.modal-content .section > div {
+  width: 100%;
 }
