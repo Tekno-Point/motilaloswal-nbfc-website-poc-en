@@ -501,7 +501,7 @@
         "valueType": "string[]"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "eyebrow",
         "label": "Eyebrow",
         "raw": true
