@@ -115,21 +115,72 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // Navbar sections hover 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
-      });
+    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li ').forEach((navSection) => {
+      if (navSection.querySelector('ul')) {
+        navSection.classList.add('nav-drop');
+      }
+      if (isDesktop.matches) {
+        navSection.addEventListener('mouseover', () => {
+          if (isDesktop.matches) {
+            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            toggleAllNavSections(navSections);
+            navSection.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        navSection.addEventListener('mouseout', () => {
+          if (isDesktop.matches) {
+            navSection.setAttribute('aria-expanded', 'false');
+          }
+        });
+      } else {
+        // Event listener for mobile click
+        navSection.addEventListener('click', () => {
+          console.log('Click on:', navSection);
+
+          // Toggle expanded state for the clicked navSection
+          const isExpanded = navSection.getAttribute('aria-expanded') === 'true';
+
+          // Collapse all sections first
+          toggleAllNavSections(navSections, 'false');
+
+          // Toggle the specific section
+          navSection.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+
+          // Toggle the visibility of the ul inside the clicked navSection
+          const subMenu = navSection.querySelector('ul');
+          if (subMenu) {
+            subMenu.style.display = !isExpanded ? 'block' : 'none';
+          }
+
+
+        });
+
+      }
     });
   }
 
-  // hamburger for mobile
+
+  //Navbar Login Button
+  const loginNavDown = nav.querySelector('.nav-tools #login--nav-down');
+  const loginOptions = nav.querySelector('.nav-tools ul ul');
+  if (loginNavDown && loginOptions) {
+    // Add click event listener to the h4 element
+    loginNavDown.addEventListener('click', () => {
+      // Toggle the display of the ul
+      if (loginOptions.style.display === 'none' || loginOptions.style.display === '') {
+        loginOptions.style.display = 'block'; // Show options
+      } else {
+        loginOptions.style.display = 'none'; // Hide options
+      }
+    });
+  }
+
+
+  //Hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
@@ -146,4 +197,84 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // Reposition the "Become a Partner" button
+  // function repositionPartnerButton() {
+  //   const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  //   const ulElement = document.querySelector('nav-sections .default-content-wrapper > ul');
+
+  //   if (isMobile && ulElement) {
+  //     // Find the 'Become a Partner' list item
+  //     const partnerItem = [...ulElement.children].find(item =>
+  //       item.querySelector('.button-container') &&
+  //       item.querySelector('.button-container a').textContent.trim() === 'Become a Partner'
+  //     );
+
+  //     if (partnerItem) {
+  //       // Remove the 'Become a Partner' item from its current position
+  //       ulElement.removeChild(partnerItem);
+
+  //       // Insert it into the third position (index 2) in the list
+  //       // Use insertBefore to insert it at the correct position
+  //       const thirdItem = ulElement.children[2];
+  //       if (thirdItem) {
+  //         ulElement.insertBefore(partnerItem, thirdItem);
+  //       } else {
+  //         // If there are less than 3 items, just append it
+  //         ulElement.appendChild(partnerItem);
+  //       }
+  //     }
+  //   }
+  // }
+  // Initial call on page load
+  // repositionPartnerButton();
+
+
+  // Duplication of Login Options 
+  function addLoginOptionsForMobile() {
+    // Select the original login options
+    const originalLoginOptions = nav.querySelector('#login--nav-down + ul');
+
+    if (originalLoginOptions) {
+      // Clone the login options
+      const clonedLoginOptions = originalLoginOptions.cloneNode(true);
+
+      // Find the nav-sections
+      const navSections = nav.querySelector('.nav-sections .default-content-wrapper');
+
+      if (navSections) {
+        // Ensure there's no existing cloned element to avoid duplication
+        const existingClonedElement = navSections.querySelector('.mobile-login-options');
+        if (!existingClonedElement) {
+          // Add a class for easy styling or identification
+          clonedLoginOptions.classList.add('mobile-login-options');
+          // Append the cloned login options to nav-sections
+          navSections.appendChild(clonedLoginOptions);
+          const mobileLoginOptions = nav.querySelectorAll(".mobile-login-options li");
+          mobileLoginOptions.forEach(li => {
+            li.classList.add('button');
+          });
+
+        }
+      }
+    }
+  }
+
+  // Function to handle visibility based on screen size
+  function handleResponsiveDesign() {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+      addLoginOptionsForMobile();
+    } else {
+      // Optionally remove the duplicated element if it's not needed on desktop
+      const clonedElement = document.querySelector('.mobile-login-options');
+      if (clonedElement) {
+        clonedElement.remove();
+      }
+    }
+  }
+  handleResponsiveDesign();
+
+
 }
