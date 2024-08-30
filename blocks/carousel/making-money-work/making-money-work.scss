@@ -6,6 +6,10 @@
             .swiper-wrapper {
                 justify-content: space-between;
                 column-gap: 15px;
+
+                @media only screen and (width <=768px){
+                    column-gap: unset;
+                }
             }
         }
     }

@@ -133,16 +133,20 @@
             border-radius: 8px;
             width: 90%;
             margin-top: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             h2 {
                 text-align: center;
                 max-width: unset;
+                align-self: baseline;
             }
 
             .button-container {
                 position: absolute;
                 bottom: 80px;
-                right: 19%;
+                right: unset;
             }
         }
 

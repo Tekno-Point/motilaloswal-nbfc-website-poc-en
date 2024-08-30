@@ -17,6 +17,10 @@
             height: 490px;
             flex-shrink: unset;
 
+            @media only screen and (width <=768px) {
+                margin-left: 20px;
+            }
+
             p {
                 a {
                     background: unset;
@@ -80,8 +84,13 @@
     }
 }
 
-@media only screen and (width <= 768px) {
-    .carousel.one-thirds-carousel{
+@media only screen and (width <=768px) {
+
+    .section.one-thirds-carousel {
+        padding: 60px 0 40px;
+    }
+
+    .carousel.one-thirds-carousel {
         width: 100%;
     }
 }

@@ -10,7 +10,7 @@
         display: none;
     }
 
-    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    .swiper-pagination-bullet-active {
         background-color: #D24D57;
         width: 25px;
         border-radius: 20px;
@@ -85,14 +85,13 @@
 
         }
 
-        /* .swiper-pagination-bullet {
-            background: #ced4da;
-        } */
+        .swiper-pagination-bullet {
+            background-color: #ced4da;
+            opacity: 1;
+        }
 
-        /* .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        .swiper-pagination-bullet-active {
             background-color: #D24D57;
-            width: 25px;
-            border-radius: 20px;
-        } */
+        }
     }
 }

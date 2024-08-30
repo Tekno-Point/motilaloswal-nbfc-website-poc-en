@@ -3,7 +3,7 @@ const heroCarousel = {
   slidesPerView: 1,
   grabCursor: true,
   autoplay: {
-    delay: 500000,
+    delay: 50000000,
     disableOnInteraction: false,
   },
   navigation: {

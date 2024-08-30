@@ -119,24 +119,26 @@
 
   .section.remarkable-achievements > div:nth-of-type(1) {
     height: 1350px;
-    display: unset;
     flex-direction: unset;
-    justify-content: unset;
     padding: 30px 15px;
     border-radius: 8px;
     width: 90%;
     margin-top: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .section.remarkable-achievements > div:nth-of-type(1) h2 {
     text-align: center;
     max-width: unset;
+    align-self: baseline;
   }
 
   .section.remarkable-achievements > div:nth-of-type(1) .button-container {
     position: absolute;
     bottom: 80px;
-    right: 19%;
+    right: unset;
   }
 
   .section.remarkable-achievements > div:nth-of-type(2) {
