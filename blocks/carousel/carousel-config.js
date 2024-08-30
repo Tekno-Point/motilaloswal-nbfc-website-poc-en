@@ -29,4 +29,7 @@ const heroCarousel = {
     },
   },
 };
-export default { 'hero-carousel': heroCarousel };
+export default {
+  'hero-carousel': heroCarousel,
+  default: heroCarousel,
+};
