@@ -115,7 +115,7 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
-  // Navbar sections hover 
+  // Navbar sections hover
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li ').forEach((navSection) => {
@@ -125,7 +125,7 @@ export default async function decorate(block) {
       if (isDesktop.matches) {
         navSection.addEventListener('mouseover', () => {
           if (isDesktop.matches) {
-            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            // const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute('aria-expanded', 'true');
           }
@@ -139,7 +139,7 @@ export default async function decorate(block) {
       } else {
         // Event listener for mobile click
         navSection.addEventListener('click', () => {
-          console.log('Click on:', navSection);
+          // console.log('Click on:', navSection);
 
           // Toggle expanded state for the clicked navSection
           const isExpanded = navSection.getAttribute('aria-expanded') === 'true';
@@ -155,16 +155,12 @@ export default async function decorate(block) {
           if (subMenu) {
             subMenu.style.display = !isExpanded ? 'block' : 'none';
           }
-
-
         });
-
       }
     });
   }
 
-
-  //Navbar Login Button
+  // Navbar Login Button
   const loginNavDown = nav.querySelector('.nav-tools #login--nav-down');
   const loginOptions = nav.querySelector('.nav-tools ul ul');
   if (loginNavDown && loginOptions) {
@@ -179,8 +175,7 @@ export default async function decorate(block) {
     });
   }
 
-
-  //Hamburger for mobile
+  // Hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
@@ -229,8 +224,7 @@ export default async function decorate(block) {
   // Initial call on page load
   // repositionPartnerButton();
 
-
-  // Duplication of Login Options 
+  // Duplication of Login Options
   function addLoginOptionsForMobile() {
     // Select the original login options
     const originalLoginOptions = nav.querySelector('#login--nav-down + ul');
@@ -240,7 +234,7 @@ export default async function decorate(block) {
       const clonedLoginOptions = originalLoginOptions.cloneNode(true);
 
       // Find the nav-sections
-      const navSections = nav.querySelector('.nav-sections .default-content-wrapper');
+      // const navSections = nav.querySelector('.nav-sections .default-content-wrapper');
 
       if (navSections) {
         // Ensure there's no existing cloned element to avoid duplication
@@ -250,11 +244,10 @@ export default async function decorate(block) {
           clonedLoginOptions.classList.add('mobile-login-options');
           // Append the cloned login options to nav-sections
           navSections.appendChild(clonedLoginOptions);
-          const mobileLoginOptions = nav.querySelectorAll(".mobile-login-options li");
-          mobileLoginOptions.forEach(li => {
+          const mobileLoginOptions = nav.querySelectorAll('.mobile-login-options li');
+          mobileLoginOptions.forEach((li) => {
             li.classList.add('button');
           });
-
         }
       }
     }
@@ -275,6 +268,4 @@ export default async function decorate(block) {
     }
   }
   handleResponsiveDesign();
-
-
 }
