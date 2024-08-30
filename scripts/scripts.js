@@ -242,3 +242,10 @@ window.onload = function () {
   const element = document.querySelector('.think-stocks > div.default-content-wrapper > ul:nth-child(2) > li:nth-child(1)');
   startTyping(element, texts, period);
 };
+
+window.onscroll = function (){
+  const element = document.querySelector('.go-to-top >div.default-content-wrapper');
+  element.style.display = "block"; 
+};
+
+

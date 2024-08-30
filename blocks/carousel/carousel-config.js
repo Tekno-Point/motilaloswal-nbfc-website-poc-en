@@ -78,10 +78,10 @@ const oneThirdCarousel = {
   },
   breakpoints: {
     300: {
-      slidesPerView: 3,
+      slidesPerView: 1,
     },
     780: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     992: {
       slidesPerView: 3,

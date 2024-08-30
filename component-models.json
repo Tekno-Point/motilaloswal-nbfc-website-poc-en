@@ -285,8 +285,28 @@
                 "value": "remarkable-achievements"
               },
               {
+                "name": "Think Stocks Form",
+                "value": "think-stocks-form"
+              },
+              {
+                "name": "Making Money Work",
+                "value": "making-money-work"
+              },
+              {
+                "name": "Highlights",
+                "value": "highlights"
+              },
+              {
+                "name": "Turbo Charge Investments",
+                "value": "turbo-charge-investments"
+              },
+              {
                 "name": "Go To Top",
                 "value": "go-to-top"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
               }
             ]
           },
