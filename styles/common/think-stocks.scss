@@ -98,12 +98,12 @@
   }
 }
 
-.section.lead-form-container {
+.section.think-stocks-form {
   .lead-form-wrapper {
     margin-top: 40px;
     max-width: 1020px;
 
-    .lead-form {
+    .banner-open-demat-account {
       form {
         padding: 8px;
         display: flex;
@@ -235,7 +235,7 @@
     }
   }
 
-  .section.lead-form-container {
+  .section.think-stocks-form {
     .lead-form-wrapper {
       max-width: 85%;
     }
@@ -262,7 +262,7 @@
 @media screen and (max-width: 767px) {
 
   .section.hero-banner-fade {
-    height: var( --font-regular)px;
+    height: 400px;
     display: block;
   }
 
@@ -308,7 +308,7 @@
     }
   }
 
-  .section.lead-form-container {
+  .section.think-stocks-form {
     .lead-form-wrapper {
       left: 0;
       right: 0;
