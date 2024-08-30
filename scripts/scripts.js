@@ -243,9 +243,7 @@ window.onload = function () {
   startTyping(element, texts, period);
 };
 
-window.onscroll = function (){
+window.onscroll = function () {
   const element = document.querySelector('.go-to-top >div.default-content-wrapper');
-  element.style.display = "block"; 
+  element.style.display = 'block';
 };
-
-
