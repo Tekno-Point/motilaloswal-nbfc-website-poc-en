@@ -80,6 +80,10 @@
   flex: 0 0 80%;
 }
 
+.footer > div > div:nth-of-type(2) > div div div ul {
+  margin-bottom: 30px;
+}
+
 .footer > div > div:nth-of-type(3) > div ul li:last-child ul {
   padding: 0;
   gap: 0;
