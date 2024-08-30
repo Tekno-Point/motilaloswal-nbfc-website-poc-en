@@ -16,9 +16,9 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
-  console.log(block);
-  const rows = [...block.children];
-  console.log(rows);
+  // console.log(block);
+  // const rows = [...block.children];
+  // console.log(rows);
   // rows.forEach((row) => {
   //   console.log(row);
   // });
