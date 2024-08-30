@@ -407,6 +407,10 @@
               {
                 "name": "Open Demat Account",
                 "value": "open-demat-account"
+              },
+              {
+                "name": "Banner Open Demat Account",
+                "value": "banner-open-demat-account"
               }
             ]
           }
@@ -430,53 +434,101 @@
     ]
   },
   {
-    "id": "swiper",
+    "id": "carousel",
     "fields": [
       {
         "component": "multiselect",
-        "label": "Columns Style",
         "name": "classes",
-        "valueType": "string",
+        "value": "",
+        "label": "Carousel Style",
         "options": [
           {
-            "name": "Swiper Style",
+            "name": "Content Style",
             "children": [
               {
-                "name": "Dot Hide",
-                "value": "dot-hide"
+                "name": "Hero Carousel",
+                "value": "hero-carousel"
               },
               {
-                "name": "Arrow Hide",
-                "value": "arrow-hide"
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
               },
               {
-                "name": "Swipe Hide Desktop",
-                "value": "swiper-hide-desktop"
-              },
-              {
-                "name": "Swipe Hide Mobile",
-                "value": "swiper-hide-Mobile"
-              }
-            ]
-          },
-          {
-            "name": "Event Style",
-            "children": [
-              {
-                "name": "Redirect Column",
-                "value": "redirect-column"
+                "name": "One Half Carousel",
+                "value": "one-half-carousel"
               }
             ]
           }
-        ]
+        ],
+        "valueType": "string[]"
       },
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "boolean",
+        "label": "Infinite",
+        "name": "infinite",
         "value": "",
-        "label": "Text",
-        "valueType": "string",
-        "row": true
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "Hero Carousel",
+                "value": "hero-carousel"
+              },
+              {
+                "name": "One Thirds Carousel",
+                "value": "one-thirds-carousel"
+              },
+              {
+                "name": "One Half Carousel",
+                "value": "one-half-carousel"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Carousel Heading"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "Carousel Heading Type",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          }
+        ]
       }
     ]
   }

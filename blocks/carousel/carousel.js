@@ -1,0 +1,48 @@
+import { createElement } from '../../scripts/scripts.js';
+import Swiper from './swiper-bundle.min.js';
+import configObject from './carousel-config.js';
+
+export default function decorate(block) {
+  const rows = Array.from(block.children);
+  const config = rows[0];
+  let configData = null;
+  Array.from(block.classList).forEach((cls) => {
+    if (configObject[cls]) configData = configObject[cls];
+  });
+  const props = rows.slice(1);
+  const swiperWrapper = createElement('div', { classes: ['swiper-wrapper'] });
+  const swiperButtonPrev = createElement('div', { classes: ['swiper-button-prev'] });
+  const swiperButtonNext = createElement('div', { classes: ['swiper-button-next'] });
+  const swiperPagination = createElement('div', { classes: ['swiper-pagination'] });
+  config.remove();
+  props.forEach((eachProps) => {
+    const [classes, image, title] = Array.from(eachProps.children);
+    const swiperSlide = createElement('div', { classes: ['swiper-slide'] });
+    classes.textContent.trim().split(',').forEach((eachClass) => {
+      swiperSlide.classList.add(eachClass.trim());
+    });
+    swiperSlide.append(image);
+    swiperSlide.append(title);
+    swiperWrapper.append(swiperSlide);
+    classes.remove();
+  });
+  configData.navigation.nextEl = swiperButtonNext;
+  configData.navigation.prevEl = swiperButtonPrev;
+  configData.pagination.el = swiperPagination;
+  block.classList.add('mySwiper');
+  block.append(swiperWrapper);
+  block.append(swiperButtonNext);
+  block.append(swiperButtonPrev);
+  block.append(swiperPagination);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          Swiper(block, configData);
+        }
+      });
+    },
+  );
+
+  observer.observe(block);
+}

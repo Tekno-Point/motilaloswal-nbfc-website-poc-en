@@ -26,7 +26,7 @@
       "investment-opportunity",
       "highest-quality-research-stock-list",
       "lead-form",
-      "swiper"
+      "carousel"
     ]
   },
   {
@@ -34,7 +34,7 @@
     "components": ["card"]
   },
   {
-    "id": "swiper",
-    "components": ["swiper-item"]
+    "id": "carousel",
+    "components": ["carousel-item", "embed", "image"]
   }
 ]

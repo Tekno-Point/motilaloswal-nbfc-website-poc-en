@@ -1,170 +1,126 @@
-.form .field-wrapper {
-  display: grid;
-  grid-auto-flow: row;
-  align-items: center;
-}
-
-.form fieldset {
-  display: grid;
-  grid-auto-flow: row;
-  margin: 0;
-  border: none;
-  padding: 0;
-}
-
-.form form > .field-wrapper + .field-wrapper,
-.form form fieldset .field-wrapper + .field-wrapper {
-  margin-top: 24px;
-}
-
-.form form > .selection-wrapper + .selection-wrapper,
-.form form fieldset .selection-wrapper + .selection-wrapper {
-  margin-top: 0.25em;
-}
-
-@media (width >= 600px) {
-  .form fieldset {
-    grid-template-columns: repeat(2, auto);
-    gap: 0.25em 24px;
-  }
-
-  .form form > .selection-wrapper + .selection-wrapper,
-  .form form fieldset .field-wrapper + .field-wrapper,
-  .form form fieldset .selection-wrapper + .selection-wrapper {
-    margin-top: 0;
-  }
-}
-
-@media (width >= 900px) {
-  .form fieldset {
-    grid-template-columns: repeat(3, auto);
-  }
-}
-
-.form label,
-.form fieldset > legend {
-  margin-bottom: 0.25em;
-  font-size: var(--body-font-size-s);
-  font-weight: 700;
-}
-
-.form .selection-wrapper label {
-  margin: 0;
-  font-weight: normal;
-}
-
-.form input,
-.form select,
-.form textarea {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0.5em;
-  border-radius: 4px;
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-size: var(--body-font-size-s);
-  transition: border-color 0.2s;
-}
-
-.form textarea {
-  resize: vertical;
-}
-
-.form input:hover,
-.form select:hover,
-.form textarea:hover {
-  border: 1px solid var(--text-color);
-}
-
-.form input:focus,
-.form select:focus,
-.form textarea:focus {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
-}
-
-.form .selection-wrapper input {
-  width: max-content;
-}
-
-@media (width >= 600px) {
-  .form input,
-  .form select,
-  .form textarea {
-    max-width: 50vw;
-  }
-
-  .form .button {
-    max-width: max-content;
-  }
-}
-
-@media (width >= 900px) {
-  .form input,
-  .form select,
-  .form textarea {
-    max-width: 33vw;
-  }
-}
-
-.form .field-wrapper.selection-wrapper {
-  grid-auto-flow: column;
-  justify-content: start;
-  gap: 1ch;
-}
-
-.form label[data-required]::after {
-  content: "*";
-  color: firebrick;
-  margin-inline-start: 1ch;
-}
-
-.form .toggle-wrapper .switch {
-  position: relative;
+.block.banner-open-demat-account {
+  margin-top: 40px;
+  background: #fff;
+  border-radius: 8px;
   display: inline-block;
-  width: 52px;
-  height: 28px;
+  padding: 8px;
+  box-shadow: 0px 8px 24px 0px rgba(115, 96, 0, 0.15);
+}
+.block.banner-open-demat-account form {
+  display: flex;
+}
+.block.banner-open-demat-account form > div label {
+  display: none;
+}
+.block.banner-open-demat-account form > div input {
+  background: #F2F5F9;
+  border: none;
+  height: 40px;
+  width: 250px;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+.block.banner-open-demat-account form > div .button {
+  border-radius: 0px 6px 6px 0px;
+  background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
+  box-shadow: 0px 4px 7px 0px rgba(50, 77, 103, 0.15);
+  border: none;
+  font-size: 12px;
+  align-items: center;
+  padding: 16px;
+  height: 40px;
 }
 
-.form .toggle-wrapper input {
-  opacity: 0;
-  width: 52px;
-  height: 28px;
+.section .lead-form-wrapper {
+  max-width: 1020px;
 }
 
-.form .toggle-wrapper .slider {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  border-radius: 28px;
-  background-color: var(--dark-color);
-  transition: background-color 0.2s;
+.block.open-demat-account form > div:nth-of-type(1) > p {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: var(--font-semi-bold);
+  text-align: left;
+}
+@media only screen and (max-width: 768px) {
+  .block.open-demat-account form > div:nth-of-type(1) > p {
+    font-size: 18px;
+  }
+}
+.block.open-demat-account form .number-wrapper label,
+.block.open-demat-account form .text-wrapper label {
+  display: none;
+}
+.block.open-demat-account form .number-wrapper input,
+.block.open-demat-account form .text-wrapper input {
+  background: #474747;
+  border-radius: 6px;
+  display: block;
+  width: 100% !important;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: none;
+  height: 48px;
+  margin: 0 0 15px !important;
+}
+.block.open-demat-account form > div:nth-child(2),
+.block.open-demat-account form > div:nth-child(3) {
+  margin-top: 16px;
+}
+.block.open-demat-account form > div:nth-child(n+4) {
+  margin-top: 20px;
+}
+.block.open-demat-account form .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.block.open-demat-account form .checkbox-wrapper label {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: var(--font-regular);
+}
+.block.open-demat-account form > div:nth-of-type(5) > p {
+  color: #8A93A0;
+  font-size: 12px;
+  font-weight: var(--font-regular);
+  text-align: left;
+}
+.block.open-demat-account form .submit-wrapper .button {
+  width: 100%;
 }
 
-.form .toggle-wrapper .slider::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 2px;
-  left: 2px;
-  border-radius: 50%;
-  background-color: var(--background-color);
-  transition: transform 0.2s;
-}
-
-.form .toggle-wrapper input:checked + .slider {
-  background-color: var(--link-color);
-}
-
-.form .toggle-wrapper input:focus + .slider {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
-}
-
-.form .toggle-wrapper input:checked + .slider::before {
-  transform: translateX(24px);
-}
+@media only screen and (max-width: 768px) {
+  main {
+    position: relative;
+  }
+  .section .lead-form-wrapper {
+    max-width: unset;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+  }
+  .block.banner-open-demat-account {
+    width: 100%;
+    margin-top: unset;
+    background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
+    box-shadow: 0px 8px 13px 0px rgba(50, 77, 103, 0.15);
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .block.banner-open-demat-account form > div input {
+    width: unset;
+    border-radius: 4px 0 0 4px;
+  }
+  .block.banner-open-demat-account form > div .button {
+    color: var(--white);
+    font-size: 10px;
+    background: #333;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+  }
+}/*# sourceMappingURL=lead-form.css.map */
