@@ -8,8 +8,21 @@
   width: 80%;
 }
 
+@media only screen and (width <= 768px) {
+  .section.market-leaders-reason.cards-container .cards-wrapper .cards.block {
+    padding: unset;
+    width: unset;
+  }
+}
+
 .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul {
   display: block;
+}
+
+@media only screen and (width <= 768px) {
+  .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul {
+    margin: 20px 0 40px;
+  }
 }
 
 .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li {
@@ -20,7 +33,7 @@
 @media only screen and (width <= 768px) {
   .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li {
     flex-direction: column;
-    gap: 15px;
+    gap: unset;
     align-items: center;
   }
 }
@@ -46,6 +59,14 @@
   width: 80px;
 }
 
+@media only screen and (width <= 768px) {
+  .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+}
+
 .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-image picture img {
   aspect-ratio: initial;
   object-fit: initial;
@@ -55,7 +76,7 @@
 
 @media only screen and (width <= 768px) {
   .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-image picture img {
-    width: 50px;
+    width: unset;
     height: 50px;
   }
 }
@@ -71,4 +92,10 @@
   color: #8A93A0 !important;
   font-family: Poppins, sans-serif;
   margin-left: 30px;
+}
+
+@media only screen and (width <= 768px) {
+  .section.market-leaders-reason.cards-container .cards-wrapper .cards.block ul li .cards-card-body p {
+    margin-left: unset;
+  }
 }

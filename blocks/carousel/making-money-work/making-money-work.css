@@ -1,1 +1,8 @@
-/*# sourceMappingURL=making-money-work.css.map */
+.section.making-money-work .carousel-wrapper {
+  margin-top: 40px;
+}
+
+.section.making-money-work .carousel-wrapper .swiper .swiper-wrapper {
+  justify-content: space-between;
+  column-gap: 15px;
+}
