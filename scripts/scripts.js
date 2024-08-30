@@ -1,3 +1,6 @@
+/* eslint-disable func-names */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-shadow */
 import {
   sampleRUM,
   loadHeader,
@@ -193,3 +196,49 @@ async function loadPage() {
 }
 
 loadPage();
+
+const texts = ['Equity', 'Mutual Funds', 'Commodities', 'US stocks', 'Bonds', 'Fixed Deposits', 'PMS', 'AIF'];
+const period = 2000;
+
+function startTyping(element, texts, period) {
+  let loopNum = 0;
+  let isDeleting = false;
+  let txt = '';
+
+  function tick() {
+    const i = loopNum % texts.length;
+    const fullTxt = texts[i];
+
+    if (isDeleting) {
+      txt = fullTxt.substring(0, txt.length - 1);
+    } else {
+      txt = fullTxt.substring(0, txt.length + 1);
+    }
+
+    element.innerHTML = `<span class="wrap">${txt}<span class="type-cursor">|</span></span>`;
+
+    let delta = 200 - Math.random() * 100;
+
+    if (isDeleting) {
+      delta /= 2;
+    }
+
+    if (!isDeleting && txt === fullTxt) {
+      delta = period;
+      isDeleting = true;
+    } else if (isDeleting && txt === '') {
+      isDeleting = false;
+      loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(tick, delta);
+  }
+
+  tick();
+}
+
+window.onload = function () {
+  const element = document.querySelector('.think-stocks > div.default-content-wrapper > ul:nth-child(2) > li:nth-child(1)');
+  startTyping(element, texts, period);
+};
