@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .section.hero-banner-fade {
   inset: 0;
   z-index: -1;
@@ -15,12 +16,12 @@
 .section.think-stocks .default-content-wrapper p:nth-child(1) {
   display: inline;
   margin-top: 40px;
-  font-weight: 700;
   line-height: 88px;
   font-size: 4.375rem;
   letter-spacing: -2.1px;
   transition: all 1s ease;
   color: var(--charcoal-gray);
+  font-weight: var(--font-bold);
   font-family: poppins-bold, sans-serif;
 }
 
@@ -30,12 +31,12 @@
 }
 
 .section.think-stocks .default-content-wrapper > ul:nth-child(2) li {
-  font-weight: 800;
   line-height: 88px;
   font-size: 4.375rem;
   transition: all 1s ease;
   text-transform: capitalize;
   color: var(--sunset-orang);
+  font-weight: var(--font-extrabold);
   font-family: poppins-extrabold, sans-serif;
 }
 
@@ -44,7 +45,7 @@
 }
 
 .section.think-stocks .default-content-wrapper p:nth-child(3) {
-  font-weight: 800;
+  font-weight: var(--font-extrabold);
   line-height: 117px;
   font-size: 5.625rem;
   letter-spacing: -2.7px;
@@ -60,7 +61,6 @@
   grid-template-columns: repeat(5, 1fr);
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .section.think-stocks .default-content-wrapper ul:nth-child(4) > li {
   gap: 15px;
   display: flex;
@@ -73,29 +73,105 @@
 }
 
 .section.think-stocks .default-content-wrapper ul:nth-child(4) > li ul li h3 strong {
-  font-weight: 600;
   line-height: 18px;
   font-size: 0.875rem;
+  font-weight: var(--font-semi-bold);
   font-family: poppins-semibold, sans-serif;
-  color: var(--dark-blue);
 }
 
 .section.think-stocks .default-content-wrapper ul:nth-child(4) > li ul li h3 em {
-  font-weight: 400;
   line-height: 15px;
   font-style: normal;
   font-size: 0.75rem;
   color: var(--light-grullo);
+  font-weight: var(--font-regular);
   font-family: poppins-regular, sans-serif;
 }
 
+.section.lead-form-container .lead-form-wrapper {
+  margin-top: 40px;
+  max-width: 1020px;
+}
+
+.section.lead-form-container .lead-form-wrapper .lead-form form {
+  padding: 8px;
+  display: flex;
+  width: fit-content;
+  border-radius: 8px;
+  align-items: center;
+  transition: all 180ms linear;
+  background-color: var(--white);
+  box-shadow: 0 8px 24px 0 rgb(115 96 0 / 15%);
+}
+
+.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper {
+  width: 250px;
+}
+
+.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper label#form-mobile-label {
+  display: none;
+}
+
+.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper input#form-mobile {
+  width: 250px;
+  border: none;
+  height: 40px;
+  outline: none;
+  padding: 0 16px;
+  font-weight: var(--font-regular);
+  line-height: 18px;
+  font-size: 0.875rem;
+  color: var(--dark-grayish);
+  background-color: var(--light-grey);
+  font-family: poppins-regular, sans-serif;
+}
+
+.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  padding: 0 16px;
+  font-weight: var(--font-semi-bold);
+  line-height: 15px;
+  font-size: 0.75rem;
+  color: var(--black);
+  display: inline-block;
+  border-radius: 0 6px 6px 0;
+  font-family: poppins-semibold, sans-serif;
+  box-shadow: 0 4px 7px 0 rgb(50 77 103 / 15%);
+}
+
+/* Typing Animation CSS */
+.section.think-stocks .default-content-wrapper > ul:nth-child(2) > li .wrap .type-cursor {
+  opacity: 1;
+  height: 16px;
+  font-weight: 300;
+  line-height: 88px;
+  font-size: 4.375rem;
+  display: inline-block;
+  color: var(--sunset-orang);
+  font-family: poppins-light, sans-serif;
+  animation: blink 0.7s ease-out forwards;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Typing Animation CSS */
 @media screen and (width >= 768px) and (width <= 1024px) {
   .section.hero-banner-fade {
     display: none;
-  }
-
-  .section.think-stocks {
-    background-color: var(--light-grey);
   }
 
   .section.think-stocks .default-content-wrapper {
@@ -125,11 +201,21 @@
   .section.think-stocks .default-content-wrapper ul:nth-child(4) > li {
     margin: 10px 0;
   }
+
+  .section.lead-form-container .lead-form-wrapper {
+    max-width: 85%;
+  }
+
+  .section.think-stocks .default-content-wrapper > ul:nth-child(2) > li .wrap .type-cursor {
+    font-weight: 300;
+    line-height: 53px;
+    font-size: 2.625rem;
+  }
 }
 
 @media screen and (width <= 767px) {
   .section.hero-banner-fade {
-    height: 400px;
+    height: var(--font-regular) px;
     display: block;
   }
 
@@ -167,5 +253,55 @@
   .section.think-stocks .default-content-wrapper ul:nth-child(4) > li span.icon img {
     width: 30px;
     height: 30px;
+  }
+
+  .section.lead-form-container .lead-form-wrapper {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 99;
+    width: inherit;
+    position: fixed;
+  }
+
+  .section.lead-form-container .lead-form-wrapper .lead-form {
+    width: inherit;
+  }
+
+  .section.lead-form-container .lead-form-wrapper .lead-form form {
+    padding: 10px;
+    width: inherit;
+    margin-top: 20px;
+    justify-content: space-between;
+    box-shadow: 0 8px 13px 0 rgb(50 77 103 / 15%);
+    background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
+  }
+
+  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper {
+    flex: 0 0 58%;
+    max-width: 58%;
+  }
+
+  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper input {
+    border-radius: 4px;
+  }
+
+  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper {
+    flex: 0 0 42%;
+    max-width: 42%;
+  }
+
+  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper button {
+    line-height: 13px;
+    color: var(--white);
+    font-size: 0.625rem;
+    background: var(--light-black);
+    box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 25%);
+  }
+
+  .section.think-stocks .default-content-wrapper > ul:nth-child(2) > li .wrap .type-cursor {
+    line-height: 38px;
+    font-size: 1.875rem;
   }
 }

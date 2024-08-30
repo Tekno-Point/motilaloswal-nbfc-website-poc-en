@@ -407,6 +407,10 @@
               {
                 "name": "Open Demat Account",
                 "value": "open-demat-account"
+              },
+              {
+                "name": "Banner Open Demat Account",
+                "value": "banner-open-demat-account"
               }
             ]
           }
@@ -495,6 +499,12 @@
           }
         ],
         "valueType": "string[]"
+      },
+      {
+        "component": "richtext",
+        "name": "eyebrow",
+        "label": "Eyebrow",
+        "raw": true
       },
       {
         "component": "reference",

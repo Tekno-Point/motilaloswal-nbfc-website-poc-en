@@ -1,3 +1,6 @@
+/* eslint-disable func-names */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-shadow */
 import {
   sampleRUM,
   loadHeader,
@@ -60,6 +63,34 @@ async function loadFonts() {
   }
 }
 
+export function createElement(tagName, options = {}) {
+  const { classes = [], props = {} } = options;
+  const elem = document.createElement(tagName);
+  const isString = typeof classes === 'string';
+  if (classes || (isString && classes !== '') || (!isString && classes.length > 0)) {
+    const classesArr = isString ? [classes] : classes;
+    elem.classList.add(...classesArr);
+  }
+  if (!isString && classes.length === 0) elem.removeAttribute('class');
+
+  if (props) {
+    Object.keys(props).forEach((propName) => {
+      const isBooleanAttribute = propName === 'allowfullscreen' || propName === 'autoplay' || propName === 'muted' || propName === 'controls';
+
+      // For boolean attributes, add the attribute without a value if it's truthy
+      if (isBooleanAttribute) {
+        if (props[propName]) {
+          elem.setAttribute(propName, '');
+        }
+      } else {
+        const value = props[propName];
+        elem.setAttribute(propName, value);
+      }
+    });
+  }
+
+  return elem;
+}
 function autolinkModals(element) {
   element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -165,3 +196,49 @@ async function loadPage() {
 }
 
 loadPage();
+
+const texts = ['Equity', 'Mutual Funds', 'Commodities', 'US stocks', 'Bonds', 'Fixed Deposits', 'PMS', 'AIF'];
+const period = 2000;
+
+function startTyping(element, texts, period) {
+  let loopNum = 0;
+  let isDeleting = false;
+  let txt = '';
+
+  function tick() {
+    const i = loopNum % texts.length;
+    const fullTxt = texts[i];
+
+    if (isDeleting) {
+      txt = fullTxt.substring(0, txt.length - 1);
+    } else {
+      txt = fullTxt.substring(0, txt.length + 1);
+    }
+
+    element.innerHTML = `<span class="wrap">${txt}<span class="type-cursor">|</span></span>`;
+
+    let delta = 200 - Math.random() * 100;
+
+    if (isDeleting) {
+      delta /= 2;
+    }
+
+    if (!isDeleting && txt === fullTxt) {
+      delta = period;
+      isDeleting = true;
+    } else if (isDeleting && txt === '') {
+      isDeleting = false;
+      loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(tick, delta);
+  }
+
+  tick();
+}
+
+window.onload = function () {
+  const element = document.querySelector('.think-stocks > div.default-content-wrapper > ul:nth-child(2) > li:nth-child(1)');
+  startTyping(element, texts, period);
+};
