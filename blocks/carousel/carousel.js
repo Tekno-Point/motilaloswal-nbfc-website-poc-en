@@ -21,7 +21,7 @@ export default function decorate(block) {
   const swiperPagination = createElement('div', { classes: ['swiper-pagination'] });
   config.remove();
   props.forEach((eachProps) => {
-    const [classes, title, image] = Array.from(eachProps.children);
+    const [classes, eyebrow, image, title] = Array.from(eachProps.children);
     const swiperSlide = createElement('div', { classes: ['swiper-slide'] });
     let selectedComponent = null;
     classes.textContent.trim().split(',').forEach((eachClass) => {
@@ -31,9 +31,10 @@ export default function decorate(block) {
       }
     });
     if (selectedComponent) {
-      selectedComponent(title);
-      swiperSlide.append(title);
+      selectedComponent(eyebrow);
+      swiperSlide.append(eyebrow);
     } else {
+      swiperSlide.append(eyebrow);
       swiperSlide.append(image);
       swiperSlide.append(title);
     }
