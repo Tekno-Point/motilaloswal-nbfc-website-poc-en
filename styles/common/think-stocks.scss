@@ -98,7 +98,7 @@
   }
 }
 
-.section {
+.section.think-stocks-form {
   .lead-form-wrapper {
     margin-top: 40px;
     max-width: 1020px;
@@ -235,7 +235,7 @@
     }
   }
 
-  .section.lead-form-container {
+  .section.think-stocks-form {
     .lead-form-wrapper {
       max-width: 85%;
     }
@@ -262,7 +262,7 @@
 @media screen and (max-width: 767px) {
 
   .section.hero-banner-fade {
-    height: var( --font-regular)px;
+    height: 400px;
     display: block;
   }
 
@@ -308,7 +308,7 @@
     }
   }
 
-  .section.lead-form-container {
+  .section.think-stocks-form {
     .lead-form-wrapper {
       left: 0;
       right: 0;
