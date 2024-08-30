@@ -283,6 +283,10 @@
               {
                 "name": "Remarkable Achievements",
                 "value": "remarkable-achievements"
+              },
+              {
+                "name": "Go To Top",
+                "value": "go-to-top"
               }
             ]
           },
