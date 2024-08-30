@@ -24,10 +24,10 @@
       letter-spacing: -2.1px;
       transition: all 1s ease;
       color: var(--charcoal-gray);
-      font-family: 'poppins-bold', sans-serif;
+      font-family: "poppins-bold", sans-serif;
     }
 
-    >ul:nth-child(2) {
+    > ul:nth-child(2) {
       padding-left: 5px;
       display: inline-flex;
 
@@ -38,7 +38,7 @@
         transition: all 1s ease;
         text-transform: capitalize;
         color: var(--sunset-orang);
-        font-family: 'poppins-extrabold', sans-serif;
+        font-family: "poppins-extrabold", sans-serif;
       }
 
       li:nth-child(2) {
@@ -53,7 +53,7 @@
       letter-spacing: -2.7px;
       transition: all 1s ease;
       color: var(--charcoal-blue);
-      font-family: 'poppins-extrabold', sans-serif;
+      font-family: "poppins-extrabold", sans-serif;
     }
 
     ul:nth-child(4) {
@@ -62,16 +62,14 @@
       transition: all 1s ease;
       grid-template-columns: repeat(5, 1fr);
 
-      >li {
+      > li {
         gap: 15px;
         display: flex;
         padding: 0 15px;
         align-items: center;
 
         ul {
-
           li {
-
             h3 {
               line-height: 1px;
 
@@ -106,7 +104,6 @@
 
   .section.think-stocks {
     background-color: var(--light-grey);
-
     .default-content-wrapper {
       max-width: 85%;
 
@@ -115,7 +112,7 @@
         font-size: 2.625rem;
       }
 
-      >ul:nth-child(2) {
+      > ul:nth-child(2) {
         li {
           line-height: 53px;
           font-size: 2.625rem;
@@ -131,17 +128,15 @@
         gap: 20px 0;
         grid-template-columns: repeat(3, 1fr);
 
-        >li {
+        > li {
           margin: 10px 0;
         }
       }
     }
   }
-
 }
 
 @media screen and (max-width: 767px) {
-
   .section.hero-banner-fade {
     height: 400px;
     display: block;
@@ -157,7 +152,7 @@
         font-size: 1.875rem;
       }
 
-      >ul:nth-child(2) {
+      > ul:nth-child(2) {
         li {
           line-height: 38px;
           font-size: 1.875rem;
@@ -174,7 +169,7 @@
         margin-top: 20px;
         grid-template-columns: repeat(2, 1fr);
 
-        >li {
+        > li {
           padding: 0;
           margin: 10px 0;
 
@@ -188,5 +183,4 @@
       }
     }
   }
-
 }
