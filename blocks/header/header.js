@@ -115,6 +115,27 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // Header background color change on scroll
+  function initializeScroll() {
+    // Ensure the element exists before attempting to manipulate it
+    const navWrapperBackground = block.firstChild;
+    if (!navWrapperBackground) {
+      // console.log('Element with class "nav-wrapper" not found.');
+      return; // Exit the function if the element is not found
+    }
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust the scroll distance as needed
+        navWrapperBackground.style.backgroundColor = '#343a40'; // Set background color
+      } else {
+        navWrapperBackground.style.backgroundColor = ''; // Reset background color
+      }
+    };
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+  }
+  // Initialize scroll listener only
+  initializeScroll();
+
   // Navbar sections hover
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
@@ -128,12 +149,14 @@ export default async function decorate(block) {
             // const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute('aria-expanded', 'true');
+            navSection.style.fontWeight = '900';
           }
         });
 
         navSection.addEventListener('mouseout', () => {
           if (isDesktop.matches) {
             navSection.setAttribute('aria-expanded', 'false');
+            navSection.style.fontWeight = '';
           }
         });
       } else {
@@ -174,6 +197,42 @@ export default async function decorate(block) {
       }
     });
   }
+  // Duplication of Login Options for Mobile View
+  function addLoginOptionsForMobile() {
+    const originalLoginOptions = nav.querySelector('#login--nav-down + ul');
+    const navSectionsDefaultCont = nav.querySelector('.nav-sections .default-content-wrapper');
+
+    if (originalLoginOptions) {
+      const clonedLoginOptions = originalLoginOptions.cloneNode(true);
+
+      if (navSectionsDefaultCont) {
+        const existingClonedElement = navSectionsDefaultCont.querySelector('.mobile-login-options');
+        if (!existingClonedElement) {
+          clonedLoginOptions.classList.add('mobile-login-options');
+          navSectionsDefaultCont.appendChild(clonedLoginOptions);
+          const mobileLoginOptions = nav.querySelectorAll('.mobile-login-options li');
+          mobileLoginOptions.forEach((li) => {
+            li.classList.add('button');
+          });
+        }
+      }
+    }
+  }
+  // Function to handle visibility based on screen size
+  function handleResponsiveDesign() {
+    const isMobile = window.matchMedia('(max-width: 769px)').matches;
+
+    if (isMobile) {
+      addLoginOptionsForMobile();
+    } else {
+      // Optionally remove the duplicated element if it's not needed on desktop
+      const clonedElement = document.querySelector('.mobile-login-options');
+      if (clonedElement) {
+        clonedElement.remove();
+      }
+    }
+  }
+  handleResponsiveDesign();
 
   // Hamburger for mobile
   const hamburger = document.createElement('div');
@@ -192,80 +251,4 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
-
-  // Reposition the "Become a Partner" button
-  // function repositionPartnerButton() {
-  //   const isMobile = window.matchMedia('(max-width: 768px)').matches;
-  //   const ulElement = document.querySelector('nav-sections .default-content-wrapper > ul');
-
-  //   if (isMobile && ulElement) {
-  //     // Find the 'Become a Partner' list item
-  //     const partnerItem = [...ulElement.children].find(item =>
-  //       item.querySelector('.button-container') &&
-  //       item.querySelector('.button-container a').textContent.trim() === 'Become a Partner'
-  //     );
-
-  //     if (partnerItem) {
-  //       // Remove the 'Become a Partner' item from its current position
-  //       ulElement.removeChild(partnerItem);
-
-  //       // Insert it into the third position (index 2) in the list
-  //       // Use insertBefore to insert it at the correct position
-  //       const thirdItem = ulElement.children[2];
-  //       if (thirdItem) {
-  //         ulElement.insertBefore(partnerItem, thirdItem);
-  //       } else {
-  //         // If there are less than 3 items, just append it
-  //         ulElement.appendChild(partnerItem);
-  //       }
-  //     }
-  //   }
-  // }
-  // Initial call on page load
-  // repositionPartnerButton();
-
-  // Duplication of Login Options
-  function addLoginOptionsForMobile() {
-    // Select the original login options
-    const originalLoginOptions = nav.querySelector('#login--nav-down + ul');
-
-    if (originalLoginOptions) {
-      // Clone the login options
-      const clonedLoginOptions = originalLoginOptions.cloneNode(true);
-
-      // Find the nav-sections
-      // const navSections = nav.querySelector('.nav-sections .default-content-wrapper');
-
-      if (navSections) {
-        // Ensure there's no existing cloned element to avoid duplication
-        const existingClonedElement = navSections.querySelector('.mobile-login-options');
-        if (!existingClonedElement) {
-          // Add a class for easy styling or identification
-          clonedLoginOptions.classList.add('mobile-login-options');
-          // Append the cloned login options to nav-sections
-          navSections.appendChild(clonedLoginOptions);
-          const mobileLoginOptions = nav.querySelectorAll('.mobile-login-options li');
-          mobileLoginOptions.forEach((li) => {
-            li.classList.add('button');
-          });
-        }
-      }
-    }
-  }
-
-  // Function to handle visibility based on screen size
-  function handleResponsiveDesign() {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-    if (isMobile) {
-      addLoginOptionsForMobile();
-    } else {
-      // Optionally remove the duplicated element if it's not needed on desktop
-      const clonedElement = document.querySelector('.mobile-login-options');
-      if (clonedElement) {
-        clonedElement.remove();
-      }
-    }
-  }
-  handleResponsiveDesign();
 }

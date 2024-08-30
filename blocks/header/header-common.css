@@ -6,7 +6,7 @@ header.header-wrapper .header {
 
 header.header-wrapper .header .nav-wrapper {
   background-color: #fff;
-  position: relative;
+  position: fixed;
   top: 0;
 }
 
@@ -499,8 +499,25 @@ header.header-wrapper
   li:hover
   ul
   li {
+  font-size: 0.9rem;
   flex-direction: column;
   margin-bottom: 20px;
+}
+
+header.header-wrapper
+  .header
+  .nav-wrapper
+  nav
+  .nav-sections
+  .default-content-wrapper
+  ul
+  li
+  ul
+  li:hover
+  ul
+  li
+  strong {
+  margin-bottom: -8px;
 }
 
 @media screen and (width <= 1024px) {

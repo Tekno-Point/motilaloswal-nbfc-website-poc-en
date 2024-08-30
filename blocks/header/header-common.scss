@@ -5,7 +5,7 @@ header.header-wrapper {
     z-index: 20;
     .nav-wrapper {
       background-color: #ffffff;
-      position: relative;
+      position: fixed;
       top: 0;
       nav {
         @media screen and (max-width: 1024px) {
@@ -110,8 +110,12 @@ header.header-wrapper {
                           position: initial;
                         }
                         li {
+                          font-size: 0.9rem;
                           flex-direction: column;
                           margin-bottom: 20px;
+                          strong {
+                            margin-bottom: -8px;
+                          }
                         }
                       }
                     }
@@ -138,7 +142,6 @@ header.header-wrapper {
               .button-container {
                 color: #f59f00;
                 font-size: 1em;
-                // margin-left: 0.626em; //10px
                 .button {
                   background: none;
                   padding: 0;
@@ -183,7 +186,6 @@ header.header-wrapper {
                 font-size: 12px;
                 padding: 10px 16px;
                 @media screen and (max-width: 1024px) {
-                  // width: max-content;
                   font-size: 10px;
                   padding: 11px 5px;
                 }
