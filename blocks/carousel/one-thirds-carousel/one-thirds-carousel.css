@@ -1,0 +1,79 @@
+.section.one-thirds-carousel {
+  padding-top: 240px;
+}
+
+.carousel.one-thirds-carousel {
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.carousel.one-thirds-carousel > div > div {
+  padding: 20px 20px 0;
+  margin-right: 20px;
+  border-radius: 8px;
+  background: #fff;
+  height: 490px;
+  flex-shrink: unset;
+}
+
+.carousel.one-thirds-carousel > div > div p a {
+  background: unset;
+  padding: 0;
+}
+
+.carousel.one-thirds-carousel > div > div p a span {
+  width: 190px;
+  height: 305px;
+  min-height: 325px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.carousel.one-thirds-carousel > div > div p a span img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.carousel.one-thirds-carousel > div > div p:first-child {
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.carousel.one-thirds-carousel > div > div p:nth-child(2) {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.carousel.one-thirds-carousel > div > div ul {
+  background: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), linear-gradient(128.53deg, #fff 39.77%, #E8E8E8 72.17%);
+  box-shadow: 4px 4px 12px rgb(30 51 72 / 15%), 0 16px 48px rgb(112 144 176 / 30%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 0 0 8px 8px;
+  height: 52px;
+}
+
+.carousel.one-thirds-carousel > div > div ul li a span > img {
+  width: 115px;
+  height: 40px;
+}
+
+.carousel.one-thirds-carousel div.swiper-pagination {
+  background-color: #f2f6f9;
+  position: unset;
+  padding-top: 24px;
+  margin: 0;
+}
+
+@media only screen and (width <= 768px) {
+  .carousel.one-thirds-carousel {
+    width: 100%;
+  }
+}
