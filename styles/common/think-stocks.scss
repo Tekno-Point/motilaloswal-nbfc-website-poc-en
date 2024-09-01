@@ -23,11 +23,11 @@
       letter-spacing: -2.1px;
       transition: all 1s ease;
       color: var(--charcoal-gray);
-      font-weight: var( --font-bold);
-      font-family: 'poppins-bold', sans-serif;
+      font-weight: var(--font-bold);
+      font-family: "poppins-bold", sans-serif;
     }
 
-    >ul:nth-child(2) {
+    > ul:nth-child(2) {
       padding-left: 5px;
       display: inline-flex;
 
@@ -37,8 +37,8 @@
         transition: all 1s ease;
         text-transform: capitalize;
         color: var(--sunset-orang);
-        font-weight: var( --font-extrabold);
-        font-family: 'poppins-extrabold', sans-serif;
+        font-weight: var(--font-extrabold);
+        font-family: "poppins-extrabold", sans-serif;
       }
 
       li:nth-child(2) {
@@ -47,13 +47,13 @@
     }
 
     p:nth-child(3) {
-      font-weight: var( --font-extrabold);
+      font-weight: var(--font-extrabold);
       line-height: 117px;
       font-size: 5.625rem;
       letter-spacing: -2.7px;
       transition: all 1s ease;
       color: var(--charcoal-blue);
-      font-family: 'poppins-extrabold', sans-serif;
+      font-family: "poppins-extrabold", sans-serif;
     }
 
     ul:nth-child(4) {
@@ -62,24 +62,22 @@
       transition: all 1s ease;
       grid-template-columns: repeat(5, 1fr);
 
-      >li {
+      > li {
         gap: 15px;
         display: flex;
         padding: 0 15px;
         align-items: center;
 
         ul {
-
           li {
-
             h3 {
               line-height: 1px;
 
               strong {
                 line-height: 18px;
                 font-size: 0.875rem;
-                font-weight: var( --font-semi-bold);
-                font-family: 'poppins-semibold', sans-serif;
+                font-weight: var(--font-semi-bold);
+                font-family: "poppins-semibold", sans-serif;
               }
 
               em {
@@ -87,8 +85,8 @@
                 font-style: normal;
                 font-size: 0.75rem;
                 color: var(--light-grullo);
-                font-weight: var( --font-regular);
-                font-family: 'poppins-regular', sans-serif;
+                font-weight: var(--font-regular);
+                font-family: "poppins-regular", sans-serif;
               }
             }
           }
@@ -119,7 +117,6 @@
 
           label#form-mobile-label {
             display: none;
-
           }
 
           input#form-mobile {
@@ -128,12 +125,12 @@
             height: 40px;
             outline: none;
             padding: 0 16px;
-            font-weight: var( --font-regular);
+            font-weight: var(--font-regular);
             line-height: 18px;
             font-size: 0.875rem;
             color: var(--dark-grayish);
             background-color: var(--light-grey);
-            font-family: 'poppins-regular', sans-serif;
+            font-family: "poppins-regular", sans-serif;
           }
         }
 
@@ -143,17 +140,16 @@
             height: 40px;
             cursor: pointer;
             padding: 0 16px;
-            font-weight: var( --font-semi-bold);
+            font-weight: var(--font-semi-bold);
             line-height: 15px;
             font-size: 0.75rem;
             color: var(--black);
             display: inline-block;
             border-radius: 0px 6px 6px 0px;
-            font-family: 'poppins-semibold', sans-serif;
+            font-family: "poppins-semibold", sans-serif;
             box-shadow: 0px 4px 7px 0px rgba(50, 77, 103, 0.15);
           }
         }
-
       }
     }
   }
@@ -162,8 +158,8 @@
 /* Typing Animation CSS*/
 .section.think-stocks {
   .default-content-wrapper {
-    >ul:nth-child(2) {
-      >li {
+    > ul:nth-child(2) {
+      > li {
         .wrap {
           .type-cursor {
             opacity: 1;
@@ -173,7 +169,7 @@
             font-size: 4.375rem;
             display: inline-block;
             color: var(--sunset-orang);
-            font-family: 'poppins-light',"sans-serif";
+            font-family: "poppins-light", "sans-serif";
             animation: blink 0.7s ease-out forwards;
           }
         }
@@ -212,7 +208,7 @@
         font-size: 2.625rem;
       }
 
-      >ul:nth-child(2) {
+      > ul:nth-child(2) {
         li {
           line-height: 53px;
           font-size: 2.625rem;
@@ -228,7 +224,7 @@
         gap: 20px 0;
         grid-template-columns: repeat(3, 1fr);
 
-        >li {
+        > li {
           margin: 10px 0;
         }
       }
@@ -243,8 +239,8 @@
 
   .section.think-stocks {
     .default-content-wrapper {
-      >ul:nth-child(2) {
-        >li {
+      > ul:nth-child(2) {
+        > li {
           .wrap {
             .type-cursor {
               font-weight: 300;
@@ -256,11 +252,9 @@
       }
     }
   }
-
 }
 
 @media screen and (max-width: 767px) {
-
   .section.hero-banner-fade {
     height: 400px;
     display: block;
@@ -276,7 +270,7 @@
         font-size: 1.875rem;
       }
 
-      >ul:nth-child(2) {
+      > ul:nth-child(2) {
         li {
           line-height: 38px;
           font-size: 1.875rem;
@@ -293,7 +287,7 @@
         margin-top: 20px;
         grid-template-columns: repeat(2, 1fr);
 
-        >li {
+        > li {
           padding: 0;
           margin: 10px 0;
 
@@ -314,7 +308,7 @@
       right: 0;
       bottom: 0;
       margin: 0;
-      z-index: 99;
+      z-index: 3;
       width: inherit;
       position: fixed;
 
@@ -327,7 +321,7 @@
           margin-top: 20px;
           justify-content: space-between;
           box-shadow: 0px 8px 13px 0px rgba(50, 77, 103, 0.15);
-          background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
+          background: linear-gradient(126deg, #ffd200 0%, #f7971e 100%);
 
           .field-wrapper.number-wrapper {
             flex: 0 0 58%;
@@ -347,10 +341,9 @@
               color: var(--white);
               font-size: 0.625rem;
               background: var(--light-black);
-              box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25)
+              box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
             }
           }
-
         }
       }
     }
@@ -358,8 +351,8 @@
 
   .section.think-stocks {
     .default-content-wrapper {
-      >ul:nth-child(2) {
-        >li {
+      > ul:nth-child(2) {
+        > li {
           .wrap {
             .type-cursor {
               line-height: 38px;
@@ -370,5 +363,4 @@
       }
     }
   }
-
 }
