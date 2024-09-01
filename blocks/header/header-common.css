@@ -7,6 +7,9 @@ header.header-wrapper .header .nav-wrapper {
   position: fixed;
   top: 0;
 }
+header.header-wrapper .header .nav-wrapper.white-bg {
+  background-color: white;
+}
 @media screen and (max-width: 1024px) {
   header.header-wrapper .header .nav-wrapper nav {
     gap: 0;
@@ -18,6 +21,7 @@ header.header-wrapper .header .nav-wrapper nav .nav-hamburger button {
 @media screen and (max-width: 1025px) {
   header.header-wrapper .header .nav-wrapper nav .nav-hamburger button {
     display: block;
+    z-index: 13;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -35,7 +39,7 @@ header.header-wrapper .header .nav-wrapper nav .nav-hamburger button {
     top: 0;
     left: 0;
     overflow-y: scroll;
-    z-index: 100;
+    z-index: 10;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -54,6 +58,11 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
   flex-wrap: wrap;
   gap: 0;
 }
+@media screen and (max-width: 1024px) {
+  header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul {
+    margin-top: 60px;
+  }
+}
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li {
   padding: 10px 16px 10px 0;
 }
@@ -64,6 +73,9 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
     border-top: 1px solid #dee2e6;
     color: #343a40;
   }
+}
+header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li p span {
+  display: none;
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul {
   width: 716px;
@@ -84,6 +96,7 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
     left: 0;
     margin: 0;
     width: unset;
+    margin-top: 0px;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li {

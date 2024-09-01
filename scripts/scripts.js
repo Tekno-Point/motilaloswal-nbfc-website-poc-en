@@ -1,6 +1,7 @@
 /* eslint-disable func-names */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-shadow */
+import { toggleMenu } from '../blocks/header/header.js';
 import {
   sampleRUM,
   loadHeader,
@@ -153,7 +154,17 @@ async function loadEager(doc) {
     // do nothing
   }
 }
+// document.body.addEventListener('click', function (e) {
+//   bodyEventHandler(e, this);
+//   if (!(e.target.closest('.header'))) {
+//     const nav = document.getElementById('nav');
+//     const navSections = document.querySelector('.nav-sections');
+//     toggleMenu(nav, navSections);
+//   }
+// })
+// export function bodyEventHandler(e, _this) {
 
+// }
 /**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
@@ -241,4 +252,16 @@ function startTyping(element, texts, period) {
 window.onload = function () {
   const element = document.querySelector('.think-stocks > div.default-content-wrapper > ul:nth-child(2) > li:nth-child(1)');
   startTyping(element, texts, period);
+};
+
+window.onscroll = function () {
+  const foldThreshold = 100;
+  const navWrapper = document.querySelector(".nav-wrapper");
+
+  // Check if the scroll position is greater than the fold threshold
+  if (window.scrollY > foldThreshold) {
+    navWrapper.classList.add('white-bg');
+  } else {
+    navWrapper.classList.remove('white-bg');
+  }
 };

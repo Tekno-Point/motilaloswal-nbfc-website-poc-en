@@ -7,6 +7,9 @@ header.header-wrapper {
       // background-color: #ffffff;
       position: fixed;
       top: 0;
+      &.white-bg {
+        background-color: white;
+      }
       nav {
         @media screen and (max-width: 1024px) {
           gap: 0;
@@ -16,6 +19,7 @@ header.header-wrapper {
             display: none;
             @media screen and (max-width: 1025px) {
               display: block;
+              z-index: 13;
             }
           }
         }
@@ -34,7 +38,7 @@ header.header-wrapper {
             top: 0;
             left: 0;
             overflow-y: scroll;
-            z-index: 100;
+            z-index: 10;
           }
           .default-content-wrapper {
             @media screen and (max-width: 1024px) {
@@ -51,6 +55,7 @@ header.header-wrapper {
               flex-wrap: wrap;
               gap: 0;
               @media screen and (max-width: 1024px) {
+                margin-top: 60px;
               }
               li {
                 padding: 10px 16px 10px 0;
@@ -60,6 +65,12 @@ header.header-wrapper {
                     font-size: 16px;
                     border-top: 1px solid #dee2e6;
                     color: #343a40;
+                  }
+                  span {
+                    display: none;
+                    // @media screen and (max-width: 1024px) {
+                    //   display: block;
+                    // }
                   }
                 }
 
@@ -80,6 +91,7 @@ header.header-wrapper {
                     left: 0;
                     margin: 0;
                     width: unset;
+                    margin-top: 0px;
                   }
                   li {
                     display: flex;

@@ -3,6 +3,8 @@ import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
+const isMobile = window.matchMedia('(max-width: 769px)');
+
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -53,7 +55,7 @@ function toggleAllNavSections(sections, expanded = false) {
  * @param {Element} navSections The nav sections within the container element
  * @param {*} forceExpanded Optional param to force nav expand behavior when not null
  */
-function toggleMenu(nav, navSections, forceExpanded = null) {
+export function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
@@ -138,8 +140,9 @@ export default async function decorate(block) {
   function toggleMenuList(drop) {
     const p = drop.querySelector('p');
     const ul = drop.querySelector('ul');
+    // debugger;
     p?.addEventListener('click', (e) => {
-      e.stopImmediatePropagation();
+      // e.stopImmediatePropagation();
       // navDrops.forEach(function (eachdrop) {
       Array.from(drop.parentElement.children).forEach((eachdrop) => {
         if (eachdrop && eachdrop !== drop) {
@@ -155,6 +158,9 @@ export default async function decorate(block) {
   // Navbar sections hover
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    if (isMobile.matches) {
+      navSections.append(navBrand.cloneNode(true));
+    }
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li ').forEach((navSection) => {
       if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
@@ -178,22 +184,9 @@ export default async function decorate(block) {
       } else {
         // Event listener for mobile click
         navSection.addEventListener('click', () => {
-          // console.log('Click on:', navSection);
-
-          // Toggle expanded state for the clicked navSection
           const isExpanded = navSection.getAttribute('aria-expanded') === 'true';
-
-          // Collapse all sections first
           toggleAllNavSections(navSections, 'false');
-
-          // Toggle the specific section
           navSection.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
-
-          // Toggle the visibility of the ul inside the clicked navSection
-          // const subMenu = navSection.querySelector('ul');
-          // if (subMenu) {
-          //   subMenu.style.display = !isExpanded ? 'block' : 'none';
-          // }
         });
       }
     });
@@ -244,9 +237,8 @@ export default async function decorate(block) {
   }
   // Function to handle visibility based on screen size
   function handleResponsiveDesign() {
-    const isMobile = window.matchMedia('(max-width: 769px)').matches;
 
-    if (isMobile) {
+    if (isMobile.matches) {
       addLoginOptionsForMobile();
     } else {
       // Optionally remove the duplicated element if it's not needed on desktop
