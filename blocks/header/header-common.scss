@@ -112,7 +112,7 @@ header.header-wrapper {
                   li {
                     display: flex;
                     position: relative;
-                    font-size: 16px;
+                    font-size: 13px;
                     padding: 0;
                     @media screen and (max-width: 1024px) {
                       flex-direction: column;
@@ -168,10 +168,7 @@ header.header-wrapper {
                           margin-bottom: 30px;
                           line-height: normal;
                           strong {
-                            margin-bottom: -8px;
-                            @media screen and (max-width: 1024px) {
-                              margin-bottom: -20px;
-                            }
+                            margin-bottom: -20px;
                           }
                         }
                       }
