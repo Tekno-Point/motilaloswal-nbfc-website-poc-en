@@ -253,19 +253,29 @@ export default async function decorate(block) {
   }
   handleResponsiveDesign();
 
+
+  // Function to toggle the background color
+  function toggleBackgroundColor(element) {
+    // Define the colors
+    const color1 = 'rgb(19 19 19 / 75%)'; // Color when the menu is active
+    const color2 = ''; // Default color when the menu is inactive
+
+    // Check current background color and toggle
+    if (element.style.backgroundColor === color2) {
+      element.style.backgroundColor = color1;
+    } else {
+      element.style.backgroundColor = color2;
+    }
+  }
   // Hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', async () => {
+  hamburger.addEventListener('click', () => {
     toggleMenu(nav, navSections);
-    if (isMobile) {
-      document.body.classList.toggle('modal-open');
-      const { showModal } = await createModal(fragment.childNodes);
-      showModal();
-    }
+    toggleBackgroundColor(document.querySelector('.nav-wrapper'));
   });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
