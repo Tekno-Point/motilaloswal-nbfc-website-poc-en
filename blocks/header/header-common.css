@@ -40,15 +40,16 @@ header.header-wrapper .header .nav-wrapper nav .nav-hamburger button {
     left: 0;
     overflow-y: scroll;
     z-index: 10;
+    min-height: 770px;
+    height: 100%;
   }
 }
 @media screen and (max-width: 1024px) {
   header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 770px;
-    height: 100%;
+    gap: 50px;
+    width: 100%;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul {
@@ -60,22 +61,39 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
 }
 @media screen and (max-width: 1024px) {
   header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul {
-    margin-top: 60px;
+    margin-top: 70px;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li {
   padding: 10px 16px 10px 0;
 }
 @media screen and (max-width: 1024px) {
+  header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li {
+    padding: 0;
+  }
+}
+header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li p {
+  line-height: normal;
+}
+@media screen and (max-width: 1024px) {
   header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li p {
-    padding: 15px;
+    padding: 20px;
     font-size: 16px;
     border-top: 1px solid #dee2e6;
-    color: #343a40;
+    display: flex;
+    justify-content: space-between;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li p span {
   display: none;
+}
+@media screen and (max-width: 1024px) {
+  header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li p span {
+    display: block;
+    padding: 0 5px;
+    border-radius: 4px;
+    background-color: #6d7785;
+  }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul {
   width: 716px;
@@ -93,10 +111,15 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
   header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul {
     display: none;
     position: relative;
-    left: 0;
+    right: 5%;
+    left: 5%;
     margin: 0;
-    width: unset;
+    width: 90%;
+    height: unset;
     margin-top: 0px;
+    border: none;
+    box-shadow: none;
+    background-color: white;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li {
@@ -161,11 +184,20 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
 }
 @media screen and (max-width: 1024px) {
   header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li p {
+    height: unset;
     width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li:hover {
   background-color: #eff2f5;
+}
+@media screen and (max-width: 1024px) {
+  header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li:hover {
+    background-color: white;
+  }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li:hover ul {
   display: grid;
@@ -191,10 +223,16 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li:hover ul li {
   font-size: 0.9rem;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  line-height: normal;
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li:hover ul li strong {
   margin-bottom: -8px;
+}
+@media screen and (max-width: 1024px) {
+  header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li:hover ul li strong {
+    margin-bottom: -20px;
+  }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul li ul li ul {
   display: none;
@@ -213,6 +251,8 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
     width: 100%;
     position: relative;
     left: 0;
+    background: white;
+    padding: 0 22px;
   }
 }
 header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper ul .button-container {
@@ -242,7 +282,14 @@ header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wr
 @media screen and (max-width: 769px) {
   header.header-wrapper .header .nav-wrapper nav .nav-sections .default-content-wrapper .mobile-login-options li {
     width: 90%;
+    padding: 10px;
   }
+}
+header.header-wrapper .header .nav-wrapper nav .nav-sections .nav-brand-copy {
+  position: absolute;
+  top: 7px;
+  left: 48px;
+  width: unset;
 }
 @media screen and (max-width: 1024px) {
   header.header-wrapper .header .nav-wrapper nav .nav-tools {
@@ -309,4 +356,18 @@ header.header-wrapper .header .nav-wrapper nav .nav-tools .default-content-wrapp
 }
 header.header-wrapper .header .nav-wrapper nav .nav-tools .default-content-wrapper ul li ul li:hover {
   background-color: #ddd;
+}
+
+.overlay {
+  position: fixed; /* Cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Ensure it sits on top of other content */
+}
+
+.add-color-orange {
+  color: #f7971e;
 }/*# sourceMappingURL=header-common.css.map */

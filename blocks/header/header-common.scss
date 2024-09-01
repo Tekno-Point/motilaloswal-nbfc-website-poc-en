@@ -39,14 +39,16 @@ header.header-wrapper {
             left: 0;
             overflow-y: scroll;
             z-index: 10;
+            min-height: 770px;
+            height: 100%;
+            // width: 100%;
           }
           .default-content-wrapper {
             @media screen and (max-width: 1024px) {
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
-              min-height: 770px;
-              height: 100%;
+              gap: 50px;
+              width: 100%;
             }
             ul {
               font-size: 1em; //16px
@@ -55,22 +57,30 @@ header.header-wrapper {
               flex-wrap: wrap;
               gap: 0;
               @media screen and (max-width: 1024px) {
-                margin-top: 60px;
+                margin-top: 70px;
               }
               li {
                 padding: 10px 16px 10px 0;
+                @media screen and (max-width: 1024px) {
+                  padding: 0;
+                }
                 p {
+                  line-height: normal;
                   @media screen and (max-width: 1024px) {
-                    padding: 15px;
+                    padding: 20px;
                     font-size: 16px;
                     border-top: 1px solid #dee2e6;
-                    color: #343a40;
+                    display: flex;
+                    justify-content: space-between;
                   }
                   span {
                     display: none;
-                    // @media screen and (max-width: 1024px) {
-                    //   display: block;
-                    // }
+                    @media screen and (max-width: 1024px) {
+                      display: block;
+                      padding: 0 5px;
+                      border-radius: 4px;
+                      background-color: #6d7785;
+                    }
                   }
                 }
 
@@ -88,10 +98,15 @@ header.header-wrapper {
                   @media screen and (max-width: 1024px) {
                     display: none;
                     position: relative;
-                    left: 0;
+                    right: 5%;
+                    left: 5%;
                     margin: 0;
-                    width: unset;
+                    width: 90%;
+                    height: unset;
                     margin-top: 0px;
+                    border: none;
+                    box-shadow: none;
+                    background-color: white;
                   }
                   li {
                     display: flex;
@@ -114,12 +129,20 @@ header.header-wrapper {
                       height: 88px;
                       width: 40%;
                       padding: 20px;
+
                       @media screen and (max-width: 1024px) {
+                        height: unset;
                         width: 100%;
+                        padding: 20px 10px;
+                        display: flex;
+                        flex-direction: column;
                       }
                     }
                     &:hover {
                       background-color: #eff2f5;
+                      @media screen and (max-width: 1024px) {
+                        background-color: white;
+                      }
                       ul {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
@@ -141,9 +164,13 @@ header.header-wrapper {
                         li {
                           font-size: 0.9rem;
                           flex-direction: column;
-                          margin-bottom: 20px;
+                          margin-bottom: 30px;
+                          line-height: normal;
                           strong {
                             margin-bottom: -8px;
+                            @media screen and (max-width: 1024px) {
+                              margin-bottom: -20px;
+                            }
                           }
                         }
                       }
@@ -163,6 +190,8 @@ header.header-wrapper {
                         width: 100%;
                         position: relative;
                         left: 0;
+                        background: white;
+                        padding: 0 22px;
                       }
                     }
                   }
@@ -191,9 +220,16 @@ header.header-wrapper {
               li {
                 @media screen and (max-width: 769px) {
                   width: 90%;
+                  padding: 10px;
                 }
               }
             }
+          }
+          .nav-brand-copy {
+            position: absolute;
+            top: 7px;
+            left: 48px;
+            width: unset;
           }
         }
         .nav-tools {
@@ -265,4 +301,17 @@ header.header-wrapper {
       }
     }
   }
+}
+.overlay {
+  position: fixed; /* Cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Ensure it sits on top of other content */
+  // display: none; /* Initially hidden */
+}
+.add-color-orange {
+  color: #f7971e;
 }

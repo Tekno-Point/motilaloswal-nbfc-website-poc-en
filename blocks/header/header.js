@@ -159,7 +159,10 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     if (isMobile.matches) {
-      navSections.append(navBrand.cloneNode(true));
+      const navBrandCopy = navBrand.cloneNode(true);
+      navBrandCopy.classList.remove('nav-brand');
+      navBrandCopy.classList.add('nav-brand-copy');
+      navSections.append(navBrandCopy);
     }
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li ').forEach((navSection) => {
       if (navSection.querySelector('ul')) {
@@ -256,7 +259,14 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', async () => {
+    toggleMenu(nav, navSections);
+    if (isMobile) {
+      document.body.classList.toggle('modal-open');
+      const { showModal } = await createModal(fragment.childNodes);
+      showModal();
+    }
+  });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
