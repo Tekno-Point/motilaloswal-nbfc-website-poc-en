@@ -5,7 +5,6 @@ import { loadFragment } from '../fragment/fragment.js';
 const isDesktop = window.matchMedia('(min-width: 900px)');
 const isMobile = window.matchMedia('(max-width: 769px)');
 
-
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -141,7 +140,7 @@ export default async function decorate(block) {
     const p = drop.querySelector('p');
     const ul = drop.querySelector('ul');
     // debugger;
-    p?.addEventListener('click', (e) => {
+    p?.addEventListener('click', () => {
       // e.stopImmediatePropagation();
       // navDrops.forEach(function (eachdrop) {
       Array.from(drop.parentElement.children).forEach((eachdrop) => {
@@ -240,7 +239,6 @@ export default async function decorate(block) {
   }
   // Function to handle visibility based on screen size
   function handleResponsiveDesign() {
-
     if (isMobile.matches) {
       addLoginOptionsForMobile();
     } else {
@@ -252,7 +250,6 @@ export default async function decorate(block) {
     }
   }
   handleResponsiveDesign();
-
 
   // Function to toggle the background color
   function toggleBackgroundColor(element) {
@@ -287,7 +284,4 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
-
-
-
 }

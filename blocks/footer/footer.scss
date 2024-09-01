@@ -21,6 +21,11 @@
         bottom: 0;
         text-align: center;
         background-color: var(--light-black);
+
+        @media only screen and (max-width: 768px) {
+          width: 35%;
+          left: -10px;
+        }
       }
 
       >ol {
@@ -215,7 +220,7 @@
   }
 }
 
-@media only screen and (width >= 769px) and (width <= 1024px) {
+@media only screen and (width >=769px) and (width <=1024px) {
   .footer {
     >div>div:nth-of-type(3)>div {
       ul {
@@ -248,7 +253,7 @@
   }
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .footer {
     >div>div:nth-of-type(4)>div {
       ul {
@@ -308,7 +313,7 @@
   }
 }
 
-@media only screen and (width <= 575px) {
+@media only screen and (width <=575px) {
   .footer {
     >div>div:nth-of-type(2)>div {
       div {

@@ -1,7 +1,6 @@
 /* eslint-disable func-names */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-shadow */
-import { toggleMenu } from '../blocks/header/header.js';
 import {
   sampleRUM,
   loadHeader,
@@ -256,7 +255,7 @@ window.onload = function () {
 
 window.onscroll = function () {
   const foldThreshold = 100;
-  const navWrapper = document.querySelector(".nav-wrapper");
+  const navWrapper = document.querySelector('.nav-wrapper');
 
   // Check if the scroll position is greater than the fold threshold
   if (window.scrollY > foldThreshold) {
@@ -264,4 +263,6 @@ window.onscroll = function () {
   } else {
     navWrapper.classList.remove('white-bg');
   }
+  const element = document.querySelector('.go-to-top >div.default-content-wrapper');
+  element.style.display = 'block';
 };

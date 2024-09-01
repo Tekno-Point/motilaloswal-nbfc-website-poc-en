@@ -1,0 +1,16 @@
+.section.making-money-work {
+    .carousel-wrapper {
+        margin-top: 40px;
+
+        .swiper {
+            .swiper-wrapper {
+                justify-content: space-between;
+                column-gap: 15px;
+
+                @media only screen and (width <=768px){
+                    column-gap: unset;
+                }
+            }
+        }
+    }
+}
