@@ -135,6 +135,22 @@ export default async function decorate(block) {
   }
   // Initialize scroll listener only
   initializeScroll();
+  function toggleMenuList(drop) {
+    const p = drop.querySelector('p');
+    const ul = drop.querySelector('ul');
+    p?.addEventListener('click', (e) => {
+      e.stopImmediatePropagation();
+      // navDrops.forEach(function (eachdrop) {
+      Array.from(drop.parentElement.children).forEach((eachdrop) => {
+        if (eachdrop && eachdrop !== drop) {
+          const li = eachdrop.firstElementChild.nextElementSibling;
+          if (li) li.style.display = 'none';
+        }
+      });
+      const isBlock = ul.style.display === 'block';
+      ul.style.display = isBlock ? 'none' : 'block';
+    });
+  }
 
   // Navbar sections hover
   const navSections = nav.querySelector('.nav-sections');
@@ -174,12 +190,20 @@ export default async function decorate(block) {
           navSection.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
 
           // Toggle the visibility of the ul inside the clicked navSection
-          const subMenu = navSection.querySelector('ul');
-          if (subMenu) {
-            subMenu.style.display = !isExpanded ? 'block' : 'none';
-          }
+          // const subMenu = navSection.querySelector('ul');
+          // if (subMenu) {
+          //   subMenu.style.display = !isExpanded ? 'block' : 'none';
+          // }
         });
       }
+    });
+
+    const navDrops = navSections.querySelectorAll('.nav-drop');
+    navDrops.forEach((drop) => {
+      toggleMenuList(drop);
+      drop.querySelectorAll('li').forEach((eachUl) => {
+        toggleMenuList(eachUl);
+      });
     });
   }
 
