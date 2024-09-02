@@ -1,9 +1,9 @@
 const heroCarousel = {
-  // loop: true,
+  loop: true,
   slidesPerView: 1,
   grabCursor: true,
   autoplay: {
-    delay: 50000000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -67,7 +67,7 @@ const oneThirdCarousel = {
   slidesPerView: 3,
   grabCursor: true,
   autoplay: {
-    delay: 5000,
+    delay: 50000000,
     disableOnInteraction: false,
   },
   navigation: {
