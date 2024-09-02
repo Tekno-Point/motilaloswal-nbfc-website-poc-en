@@ -66,10 +66,10 @@ const oneThirdCarousel = {
   loop: true,
   slidesPerView: 3,
   grabCursor: true,
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   navigation: {
     // nextEl: swiperButtonNext,
     // prevEl: swiperButtonPrev,
