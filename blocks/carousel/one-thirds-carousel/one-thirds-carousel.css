@@ -1,5 +1,5 @@
 .section.one-thirds-carousel {
-  padding-top: 240px;
+  padding-top: 210px;
 }
 
 .carousel.one-thirds-carousel {
@@ -9,19 +9,15 @@
   padding: 0;
 }
 
-.carousel.one-thirds-carousel > div > div {
-  padding: 20px 20px 0;
-  margin-right: 20px;
-  border-radius: 8px;
-  background: #fff;
-  height: 490px;
-  flex-shrink: unset;
+.carousel.one-thirds-carousel > div {
+  padding-bottom: 20px;
 }
 
-@media only screen and (width <= 768px) {
-  .carousel.one-thirds-carousel > div > div {
-    margin-left: 20px;
-  }
+.carousel.one-thirds-carousel > div > div {
+  padding: 20px 20px 0;
+  border-radius: 8px;
+  background: #fff;
+  height: 469px;
 }
 
 .carousel.one-thirds-carousel > div > div p a {
@@ -64,6 +60,9 @@
   padding: 10px 15px;
   border-radius: 0 0 8px 8px;
   height: 52px;
+  width: 100%;
+  left: 0;
+  position: absolute;
 }
 
 .carousel.one-thirds-carousel > div > div ul li a span > img {
@@ -79,11 +78,17 @@
 }
 
 @media only screen and (width <= 768px) {
-  .section.one-thirds-carousel {
-    padding: 60px 0 40px;
-  }
-
   .carousel.one-thirds-carousel {
     width: 100%;
+  }
+
+  .carousel.one-thirds-carousel > div > div {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (width <= 1024px) {
+  .carousel.one-thirds-carousel > div > div {
+    margin-right: 0;
   }
 }
