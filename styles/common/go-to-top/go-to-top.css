@@ -6,7 +6,8 @@
   display: none;
   cursor: pointer;
 }
-.go-to-top div P:first-child {
+
+.go-to-top div p:first-child {
   display: block;
   width: 40px;
   height: 40px;
@@ -18,7 +19,8 @@
   position: relative;
   overflow: hidden;
 }
-.go-to-top div P:first-child span {
+
+.go-to-top div p:first-child span {
   position: absolute;
   top: 6px;
   left: 0;
@@ -27,7 +29,8 @@
   line-height: 35px;
   transition: all 0.5s;
 }
-.go-to-top div P:first-child span img {
+
+.go-to-top div p:first-child span img {
   width: 24px;
   height: 20px;
-}/*# sourceMappingURL=go-to-top.css.map */
+}
