@@ -263,6 +263,19 @@ window.onscroll = function () {
   } else {
     navWrapper.classList.remove('white-bg');
   }
+
   const element = document.querySelector('.go-to-top >div.default-content-wrapper');
-  element.style.display = 'block';
+  if (window.scrollY > foldThreshold) {
+    element.style.display = 'block';
+  } else {
+    element.style.display = 'none';
+  }
+};
+
+const element = document.querySelector('.go-to-top >div.default-content-wrapper');
+element.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 };
