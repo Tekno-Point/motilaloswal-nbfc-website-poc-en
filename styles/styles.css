@@ -151,6 +151,10 @@ main>div:nth-of-type(n+3) {
   padding: 100px 0 50px;
 }
 
+main>div:nth-last-of-type(1) {
+  padding: 0;
+}
+
 @media screen and (width <=767.99px) {
   :root {
     --heading-font-size-xxl: 32px;
