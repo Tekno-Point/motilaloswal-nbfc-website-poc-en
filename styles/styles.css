@@ -28,7 +28,7 @@
   --light-grullo: #8a93a0;
   --light-grey: #f2f6f9;
   --dark-grey: #DADFE4;
-  --dark-black:  #262626;
+  --dark-black: #262626;
   --light-black: #333;
   --dark-grayish: #343A40;
   --sunset-orang: #F7971E;
@@ -151,6 +151,10 @@ main>div:nth-of-type(n+3) {
   padding: 100px 0 50px;
 }
 
+main>div:nth-last-of-type(1) {
+  padding: 0;
+}
+
 @media screen and (width <=767.99px) {
   :root {
     --heading-font-size-xxl: 32px;
@@ -167,6 +171,10 @@ main>div:nth-of-type(n+3) {
 
   main>div:nth-of-type(n+3) {
     padding: 60px 0 40px;
+  }
+
+  main>div:nth-last-of-type(1){
+    padding: 0;
   }
 }
 

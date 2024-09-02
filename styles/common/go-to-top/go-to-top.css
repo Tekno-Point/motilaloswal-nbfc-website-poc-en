@@ -30,4 +30,17 @@
 .go-to-top div P:first-child span img {
   width: 24px;
   height: 20px;
+}
+.go-to-top div P:nth-child(2) span {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  line-height: 35px;
+  transition: all 0.5s;
+}
+.go-to-top div P:nth-child(2) span img {
+  width: 24px;
+  height: 20px;
 }/*# sourceMappingURL=go-to-top.css.map */

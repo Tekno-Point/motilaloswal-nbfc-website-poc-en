@@ -3,6 +3,7 @@ import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
+const isMobile = window.matchMedia('(max-width: 769px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -53,7 +54,7 @@ function toggleAllNavSections(sections, expanded = false) {
  * @param {Element} navSections The nav sections within the container element
  * @param {*} forceExpanded Optional param to force nav expand behavior when not null
  */
-function toggleMenu(nav, navSections, forceExpanded = null) {
+export function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
@@ -115,9 +116,53 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // Header background color change on scroll
+  function initializeScroll() {
+    // Ensure the element exists before attempting to manipulate it
+    const navWrapperBackground = block.firstChild;
+    if (!navWrapperBackground) {
+      // console.log('Element with class "nav-wrapper" not found.');
+      return; // Exit the function if the element is not found
+    }
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust the scroll distance as needed
+        navWrapperBackground.style.backgroundColor = '#343a40'; // Set background color
+      } else {
+        navWrapperBackground.style.backgroundColor = ''; // Reset background color
+      }
+    };
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+  }
+  // Initialize scroll listener only
+  initializeScroll();
+  function toggleMenuList(drop) {
+    const p = drop.querySelector('p');
+    const ul = drop.querySelector('ul');
+    // debugger;
+    p?.addEventListener('click', () => {
+      // e.stopImmediatePropagation();
+      // navDrops.forEach(function (eachdrop) {
+      Array.from(drop.parentElement.children).forEach((eachdrop) => {
+        if (eachdrop && eachdrop !== drop) {
+          const li = eachdrop.firstElementChild.nextElementSibling;
+          if (li) li.style.display = 'none';
+        }
+      });
+      const isBlock = ul.style.display === 'block';
+      ul.style.display = isBlock ? 'none' : 'block';
+    });
+  }
+
   // Navbar sections hover
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    if (isMobile.matches) {
+      const navBrandCopy = navBrand.cloneNode(true);
+      navBrandCopy.classList.remove('nav-brand');
+      navBrandCopy.classList.add('nav-brand-copy');
+      navSections.append(navBrandCopy);
+    }
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li ').forEach((navSection) => {
       if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
@@ -128,35 +173,32 @@ export default async function decorate(block) {
             // const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute('aria-expanded', 'true');
+            navSection.style.fontWeight = '900';
           }
         });
 
         navSection.addEventListener('mouseout', () => {
           if (isDesktop.matches) {
             navSection.setAttribute('aria-expanded', 'false');
+            navSection.style.fontWeight = '';
           }
         });
       } else {
         // Event listener for mobile click
         navSection.addEventListener('click', () => {
-          // console.log('Click on:', navSection);
-
-          // Toggle expanded state for the clicked navSection
           const isExpanded = navSection.getAttribute('aria-expanded') === 'true';
-
-          // Collapse all sections first
           toggleAllNavSections(navSections, 'false');
-
-          // Toggle the specific section
           navSection.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
-
-          // Toggle the visibility of the ul inside the clicked navSection
-          const subMenu = navSection.querySelector('ul');
-          if (subMenu) {
-            subMenu.style.display = !isExpanded ? 'block' : 'none';
-          }
         });
       }
+    });
+
+    const navDrops = navSections.querySelectorAll('.nav-drop');
+    navDrops.forEach((drop) => {
+      toggleMenuList(drop);
+      drop.querySelectorAll('li').forEach((eachUl) => {
+        toggleMenuList(eachUl);
+      });
     });
   }
 
@@ -174,76 +216,19 @@ export default async function decorate(block) {
       }
     });
   }
-
-  // Hamburger for mobile
-  const hamburger = document.createElement('div');
-  hamburger.classList.add('nav-hamburger');
-  hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
-      <span class="nav-hamburger-icon"></span>
-    </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
-  nav.prepend(hamburger);
-  nav.setAttribute('aria-expanded', 'false');
-  // prevent mobile nav behavior on window resize
-  toggleMenu(nav, navSections, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
-
-  const navWrapper = document.createElement('div');
-  navWrapper.className = 'nav-wrapper';
-  navWrapper.append(nav);
-  block.append(navWrapper);
-
-  // Reposition the "Become a Partner" button
-  // function repositionPartnerButton() {
-  //   const isMobile = window.matchMedia('(max-width: 768px)').matches;
-  //   const ulElement = document.querySelector('nav-sections .default-content-wrapper > ul');
-
-  //   if (isMobile && ulElement) {
-  //     // Find the 'Become a Partner' list item
-  //     const partnerItem = [...ulElement.children].find(item =>
-  //       item.querySelector('.button-container') &&
-  //       item.querySelector('.button-container a').textContent.trim() === 'Become a Partner'
-  //     );
-
-  //     if (partnerItem) {
-  //       // Remove the 'Become a Partner' item from its current position
-  //       ulElement.removeChild(partnerItem);
-
-  //       // Insert it into the third position (index 2) in the list
-  //       // Use insertBefore to insert it at the correct position
-  //       const thirdItem = ulElement.children[2];
-  //       if (thirdItem) {
-  //         ulElement.insertBefore(partnerItem, thirdItem);
-  //       } else {
-  //         // If there are less than 3 items, just append it
-  //         ulElement.appendChild(partnerItem);
-  //       }
-  //     }
-  //   }
-  // }
-  // Initial call on page load
-  // repositionPartnerButton();
-
-  // Duplication of Login Options
+  // Duplication of Login Options for Mobile View
   function addLoginOptionsForMobile() {
-    // Select the original login options
     const originalLoginOptions = nav.querySelector('#login--nav-down + ul');
+    const navSectionsDefaultCont = nav.querySelector('.nav-sections .default-content-wrapper');
 
     if (originalLoginOptions) {
-      // Clone the login options
       const clonedLoginOptions = originalLoginOptions.cloneNode(true);
 
-      // Find the nav-sections
-      // const navSections = nav.querySelector('.nav-sections .default-content-wrapper');
-
-      if (navSections) {
-        // Ensure there's no existing cloned element to avoid duplication
-        const existingClonedElement = navSections.querySelector('.mobile-login-options');
+      if (navSectionsDefaultCont) {
+        const existingClonedElement = navSectionsDefaultCont.querySelector('.mobile-login-options');
         if (!existingClonedElement) {
-          // Add a class for easy styling or identification
           clonedLoginOptions.classList.add('mobile-login-options');
-          // Append the cloned login options to nav-sections
-          navSections.appendChild(clonedLoginOptions);
+          navSectionsDefaultCont.appendChild(clonedLoginOptions);
           const mobileLoginOptions = nav.querySelectorAll('.mobile-login-options li');
           mobileLoginOptions.forEach((li) => {
             li.classList.add('button');
@@ -252,12 +237,9 @@ export default async function decorate(block) {
       }
     }
   }
-
   // Function to handle visibility based on screen size
   function handleResponsiveDesign() {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-    if (isMobile) {
+    if (isMobile.matches) {
       addLoginOptionsForMobile();
     } else {
       // Optionally remove the duplicated element if it's not needed on desktop
@@ -268,4 +250,38 @@ export default async function decorate(block) {
     }
   }
   handleResponsiveDesign();
+
+  // Function to toggle the background color
+  function toggleBackgroundColor(element) {
+    // Define the colors
+    const color1 = 'rgb(19 19 19 / 75%)'; // Color when the menu is active
+    const color2 = ''; // Default color when the menu is inactive
+
+    // Check current background color and toggle
+    if (element.style.backgroundColor === color2) {
+      element.style.backgroundColor = color1;
+    } else {
+      element.style.backgroundColor = color2;
+    }
+  }
+  // Hamburger for mobile
+  const hamburger = document.createElement('div');
+  hamburger.classList.add('nav-hamburger');
+  hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
+      <span class="nav-hamburger-icon"></span>
+    </button>`;
+  hamburger.addEventListener('click', () => {
+    toggleMenu(nav, navSections);
+    toggleBackgroundColor(document.querySelector('.nav-wrapper'));
+  });
+  nav.prepend(hamburger);
+  nav.setAttribute('aria-expanded', 'false');
+  // prevent mobile nav behavior on window resize
+  toggleMenu(nav, navSections, isDesktop.matches);
+  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+  const navWrapper = document.createElement('div');
+  navWrapper.className = 'nav-wrapper';
+  navWrapper.append(nav);
+  block.append(navWrapper);
 }

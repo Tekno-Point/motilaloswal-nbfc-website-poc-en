@@ -1,4 +1,5 @@
 @import url("./header-common.css");
+@import url("../modal/modal.css");
 
 /* header and nav layout */
 header .nav-wrapper {

@@ -1,15 +1,9 @@
-.section.carousel-container {
-    padding: unset;
-}
-
-
 .swiper {
-    width: 50%;
     padding-bottom: 30px;
 
-    .swiper-pagination {
+    /* .swiper-pagination {
         margin-top: 25px;
-    }
+    } */
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -25,5 +19,79 @@
     .swiper-slide>div>picture>img {
         width: 100%;
         object-fit: fill;
+    }
+}
+
+.section.highlights {
+    padding: unset;
+    height: 170px;
+
+    @media screen and (max-width: 767px) {
+        height: unset;
+    }
+
+    >div:nth-of-type(1) {
+        font-size: 18px;
+        font-weight: var(--font-semi-bold);
+        color: var(--white);
+        text-align: center;
+    }
+
+    >div:nth-of-type(2) {
+        margin-top: 20px;
+    }
+
+    .swiper {
+        width: 50%;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                position: relative;
+
+                >div:nth-of-type(1) {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+
+                    .button-container {
+                        height: 100%;
+
+                        a {
+                            height: 100%;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+
+                        }
+                    }
+                }
+
+                >div:nth-of-type(2) {
+                    >picture>img {
+                        border-radius: 5px;
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #ced4da;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #D24D57;
+        }
     }
 }

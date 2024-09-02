@@ -1,11 +1,17 @@
 /* stylelint-disable no-descending-specificity */
 .section.hero-banner-fade {
-  inset: 0;
+  inset: -100px 0 0;
+
+  /* inset: 0; */
   z-index: -1;
   height: 560px;
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section.think-stocks {
+  margin-top: 100px;
 }
 
 .section.think-stocks .default-content-wrapper {
@@ -88,12 +94,12 @@
   font-family: poppins-regular, sans-serif;
 }
 
-.section.lead-form-container .lead-form-wrapper {
+.section.think-stocks-form .lead-form-wrapper {
   margin-top: 40px;
   max-width: 1020px;
 }
 
-.section.lead-form-container .lead-form-wrapper .lead-form form {
+.section.think-stocks-form .lead-form-wrapper .banner-open-demat-account form {
   padding: 8px;
   display: flex;
   width: fit-content;
@@ -104,15 +110,15 @@
   box-shadow: 0 8px 24px 0 rgb(115 96 0 / 15%);
 }
 
-.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper {
+.section.think-stocks-form .lead-form-wrapper .banner-open-demat-account form .field-wrapper.number-wrapper {
   width: 250px;
 }
 
-.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper label#form-mobile-label {
+.section.think-stocks-form .lead-form-wrapper .banner-open-demat-account form .field-wrapper.number-wrapper label#form-mobile-label {
   display: none;
 }
 
-.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper input#form-mobile {
+.section.think-stocks-form .lead-form-wrapper .banner-open-demat-account form .field-wrapper.number-wrapper input#form-mobile {
   width: 250px;
   border: none;
   height: 40px;
@@ -126,7 +132,7 @@
   font-family: poppins-regular, sans-serif;
 }
 
-.section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper button {
+.section.think-stocks-form .lead-form-wrapper .banner-open-demat-account form .field-wrapper.submit-wrapper button {
   width: 100%;
   height: 40px;
   cursor: pointer;
@@ -202,7 +208,7 @@
     margin: 10px 0;
   }
 
-  .section.lead-form-container .lead-form-wrapper {
+  .section.think-stocks-form .lead-form-wrapper {
     max-width: 85%;
   }
 
@@ -215,7 +221,7 @@
 
 @media screen and (width <= 767px) {
   .section.hero-banner-fade {
-    height: var(--font-regular) px;
+    height: 400px;
     display: block;
   }
 
@@ -255,44 +261,44 @@
     height: 30px;
   }
 
-  .section.lead-form-container .lead-form-wrapper {
+  .section.think-stocks-form .lead-form-wrapper {
     left: 0;
     right: 0;
     bottom: 0;
     margin: 0;
-    z-index: 99;
+    z-index: 3;
     width: inherit;
     position: fixed;
   }
 
-  .section.lead-form-container .lead-form-wrapper .lead-form {
+  .section.think-stocks-form .lead-form-wrapper .lead-form {
     width: inherit;
   }
 
-  .section.lead-form-container .lead-form-wrapper .lead-form form {
+  .section.think-stocks-form .lead-form-wrapper .lead-form form {
     padding: 10px;
     width: inherit;
     margin-top: 20px;
     justify-content: space-between;
-    box-shadow: 0 8px 13px 0 rgb(50 77 103 / 15%);
-    background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);
+    box-shadow: 0 8px 13px 0 rgb(50 77 103 / 15%);box-shadow
+    background: linear-gradient(126deg, #FFD200 0%, #F7971E 100%);backgroundbackgroundbackgroundbackgroundbackgroundbackgroundbackgroundbackgroundbackgroundbackgroundbackground
   }
 
-  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper {
+  .section.think-stocks-form .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper {
     flex: 0 0 58%;
     max-width: 58%;
   }
 
-  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper input {
+  .section.think-stocks-form .lead-form-wrapper .lead-form form .field-wrapper.number-wrapper input {
     border-radius: 4px;
   }
 
-  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper {
+  .section.think-stocks-form .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper {
     flex: 0 0 42%;
     max-width: 42%;
   }
 
-  .section.lead-form-container .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper button {
+  .section.think-stocks-form .lead-form-wrapper .lead-form form .field-wrapper.submit-wrapper button {
     line-height: 13px;
     color: var(--white);
     font-size: 0.625rem;
