@@ -1,25 +1,20 @@
 .section.one-thirds-carousel {
-    padding-top: 240px;
+    padding-top: 210px;
 }
 
 .carousel.one-thirds-carousel {
-    width: 80%;
+    width: 85%;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 0;
 
     >div {
+        padding-bottom: 20px;
         >div {
             padding: 20px 20px 0 20px;
-            margin-right: 20px;
             border-radius: 8px;
             background: #fff;
-            height: 490px;
-            flex-shrink: unset;
-
-            @media only screen and (width <=768px) {
-                margin-left: 20px;
-            }
+            height: 469px;
 
             p {
                 a {
@@ -63,6 +58,9 @@
                 padding: 10px 15px;
                 border-radius: 0 0 8px 8px;
                 height: 52px;
+                width: 100%;
+                left: 0;
+                position: absolute;
 
                 li {
                     a {
@@ -79,18 +77,24 @@
     div.swiper-pagination {
         background-color: #f2f6f9;
         position: unset;
-        padding-top: 24px;
         margin: 0;
     }
 }
 
 @media only screen and (width <=768px) {
-
-    .section.one-thirds-carousel {
-        padding: 60px 0 40px;
-    }
-
     .carousel.one-thirds-carousel {
         width: 100%;
+
+        >div>div {
+            margin-right: 0;
+        }
     }
 }
+
+@media only screen and (width <=1024px) {
+    .carousel.one-thirds-carousel {
+        >div>div {
+            margin-right: 0;
+        }
+    }
+} 

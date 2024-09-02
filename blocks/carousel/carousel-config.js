@@ -83,13 +83,15 @@ const oneThirdCarousel = {
       slidesPerView: 1,
     },
     780: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     992: {
-      slidesPerView: 3,
+      slidesPerView: 1,
     },
-    1199: {
+    1025: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20,
     },
   },
 };

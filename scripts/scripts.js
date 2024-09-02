@@ -278,6 +278,4 @@ element.onclick = function () {
     top: 0,
     behavior: 'smooth',
   });
-  const element = document.querySelector('.go-to-top >div.default-content-wrapper');
-  element.style.display = 'block';
 };
