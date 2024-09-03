@@ -6,8 +6,7 @@
   display: none;
   cursor: pointer;
 }
-
-.go-to-top div p:first-child {
+.go-to-top div P:first-child {
   display: block;
   width: 40px;
   height: 40px;
@@ -19,8 +18,7 @@
   position: relative;
   overflow: hidden;
 }
-
-.go-to-top div p:first-child span {
+.go-to-top div P:first-child span {
   position: absolute;
   top: 6px;
   left: 0;
@@ -29,8 +27,13 @@
   line-height: 35px;
   transition: all 0.5s;
 }
-
-.go-to-top div p:first-child span img {
+.go-to-top div P:first-child span img {
   width: 24px;
   height: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .go-to-top div {
+    right: -275px;
+  }
+}/*# sourceMappingURL=go-to-top.css.map */
