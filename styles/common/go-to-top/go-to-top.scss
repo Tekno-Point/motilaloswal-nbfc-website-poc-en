@@ -36,3 +36,11 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .go-to-top {
+        div{
+            right: -275px;
+        }
+    }
+}
